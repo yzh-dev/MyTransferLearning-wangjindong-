@@ -9,7 +9,7 @@ import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 
 from utils import convert_models_to_fp32
-
+import wandb
 
 class ClipModel(object):
 
@@ -130,8 +130,8 @@ class ClipModel(object):
                 best_acc = eval_acc
                 if save_path is not None:
                     torch.save(self.model.state_dict(), save_path)
-            self.logger.info("Epoch {} : Loss {}, Acc {:.4f}".format(
-                epoch, total_loss/len(dataloader), eval_acc))
+            self.logger.info("Epoch {} : Loss {}, Acc {:.4f}".format(epoch, total_loss/len(dataloader), eval_acc))
+            wandb.log({"Loss": total_loss/len(dataloader), "Accuracy": eval_acc})
         return best_acc
 
 

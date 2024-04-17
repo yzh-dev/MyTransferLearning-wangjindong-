@@ -1,0 +1,27 @@
+
+  0%|                                                                                                                                           | 0/152 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\main.py", line 129, in <module>
+    sweep(args.model, args.dataset)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\main.py", line 122, in sweep
+    main(args)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\main.py", line 87, in main
+    best_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='./log/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\clip_model.py", line 153, in finetune
+    convert_models_to_fp32(self.model)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\utils.py", line 76, in convert_models_to_fp32
+    if 'logit_scale' in p.name:
+TypeError: argument of type 'NoneType' is not iterable
+[1m-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1mmain.py 129 <module>
+[1msweep(args.model, args.dataset)
+[1mmain.py 122 sweep
+[1mmain(args)
+[1mmain.py 87 main
+[1mbest_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='./log/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
+[1mclip_model.py 153 finetune
+[1mconvert_models_to_fp32(self.model)
+[1mutils.py 76 convert_models_to_fp32
+[1mif 'logit_scale' in p.name:
+[1mTypeError:
+[1margument of type 'NoneType' is not iterable

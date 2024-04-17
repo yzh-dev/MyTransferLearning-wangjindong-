@@ -1,0 +1,47 @@
+
+  0%|                                                                                                                                           | 0/152 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\main.py", line 129, in <module>
+    sweep(args.model, args.dataset)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\main.py", line 122, in sweep
+    main(args)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\main.py", line 87, in main
+    best_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='./log/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\clip_model.py", line 136, in finetune
+    image_features = self.ImageAdapter(image_features)
+  File "C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\Myclip\clip_model.py", line 25, in forward
+    a = self.fc(x)
+  File "C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torch\nn\modules\container.py", line 204, in forward
+    input = module(input)
+  File "C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torch\nn\modules\module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torch\nn\modules\linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: expected scalar type Half but found Float
+[1m-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1mmain.py 129 <module>
+[1msweep(args.model, args.dataset)
+[1mmain.py 122 sweep
+[1mmain(args)
+[1mmain.py 87 main
+[1mbest_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='./log/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
+[1mclip_model.py 136 finetune
+[1mimage_features = self.ImageAdapter(image_features)
+[1mmodule.py 1194 _call_impl
+[1mreturn forward_call(*input, **kwargs)
+[1mclip_model.py 25 forward
+[1ma = self.fc(x)
+[1mmodule.py 1194 _call_impl
+[1mreturn forward_call(*input, **kwargs)
+[1mcontainer.py 204 forward
+[1minput = module(input)
+[1mmodule.py 1194 _call_impl
+[1mreturn forward_call(*input, **kwargs)
+[1mlinear.py 114 forward
+[1mreturn F.linear(input, self.weight, self.bias)
+[1mRuntimeError:
+[1mexpected scalar type Half but found Float

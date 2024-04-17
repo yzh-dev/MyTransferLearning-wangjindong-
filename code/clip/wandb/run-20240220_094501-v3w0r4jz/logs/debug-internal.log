@@ -1,0 +1,111 @@
+2024-02-20 09:45:01,965 INFO    StreamThr :16396 [internal.py:wandb_internal():86] W&B internal server running at pid: 16396, started at: 2024-02-20 09:45:01.964988
+2024-02-20 09:45:01,966 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status
+2024-02-20 09:45:01,968 INFO    WriterThread:16396 [datastore.py:open_for_write():85] open: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\run-v3w0r4jz.wandb
+2024-02-20 09:45:01,969 DEBUG   SenderThread:16396 [sender.py:send():379] send: header
+2024-02-20 09:45:02,000 DEBUG   SenderThread:16396 [sender.py:send():379] send: run
+2024-02-20 09:45:02,844 INFO    SenderThread:16396 [dir_watcher.py:__init__():211] watching files in: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files
+2024-02-20 09:45:02,845 INFO    SenderThread:16396 [sender.py:_start_run_threads():1121] run started: v3w0r4jz with start time 1708393501.96599
+2024-02-20 09:45:02,845 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: summary_record
+2024-02-20 09:45:02,845 INFO    SenderThread:16396 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2024-02-20 09:45:02,852 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: check_version
+2024-02-20 09:45:02,852 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: check_version
+2024-02-20 09:45:03,178 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: run_start
+2024-02-20 09:45:03,195 DEBUG   HandlerThread:16396 [system_info.py:__init__():31] System info init
+2024-02-20 09:45:03,195 DEBUG   HandlerThread:16396 [system_info.py:__init__():46] System info init done
+2024-02-20 09:45:03,195 INFO    HandlerThread:16396 [system_monitor.py:start():181] Starting system monitor
+2024-02-20 09:45:03,196 INFO    SystemMonitor:16396 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2024-02-20 09:45:03,196 INFO    HandlerThread:16396 [system_monitor.py:probe():201] Collecting system info
+2024-02-20 09:45:03,201 INFO    SystemMonitor:16396 [interfaces.py:start():190] Started cpu monitoring
+2024-02-20 09:45:03,201 INFO    SystemMonitor:16396 [interfaces.py:start():190] Started disk monitoring
+2024-02-20 09:45:03,202 INFO    SystemMonitor:16396 [interfaces.py:start():190] Started gpu monitoring
+2024-02-20 09:45:03,208 INFO    SystemMonitor:16396 [interfaces.py:start():190] Started memory monitoring
+2024-02-20 09:45:03,217 INFO    SystemMonitor:16396 [interfaces.py:start():190] Started network monitoring
+2024-02-20 09:45:03,225 DEBUG   HandlerThread:16396 [system_info.py:probe():195] Probing system
+2024-02-20 09:45:03,226 DEBUG   HandlerThread:16396 [system_info.py:_probe_git():180] Probing git
+2024-02-20 09:45:03,286 DEBUG   HandlerThread:16396 [system_info.py:_probe_git():188] Probing git done
+2024-02-20 09:45:03,286 DEBUG   HandlerThread:16396 [system_info.py:probe():240] Probing system done
+2024-02-20 09:45:03,286 DEBUG   HandlerThread:16396 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.19045-SP0', 'python': '3.10.8', 'heartbeatAt': '2024-02-20T01:45:03.225573', 'startedAt': '2024-02-20T01:45:01.958987', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'D:\\ML\\Projects\\MyTransferLearning-wangjindong-\\code\\clip\\main.py', 'codePath': 'code\\clip\\main.py', 'git': {'remote': 'https://github.com/yzh-dev/MyTransferLearning-wangjindong-.git', 'commit': '87b82a2a62bc251e620bc193365b45a9d7606365'}, 'email': 'yaozh163@163.com', 'root': 'D:/ML/Projects/MyTransferLearning-wangjindong-', 'host': 'DESKTOP-BG145PC', 'username': 'Administrator', 'executable': 'C:\\ProgramData\\Anaconda3\\envs\\mmlab\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2496.0, 'min': 0.0, 'max': 2496.0}, 'cpu_freq_per_core': [{'current': 2496.0, 'min': 0.0, 'max': 2496.0}], 'disk': {'total': 553.2424964904785, 'used': 349.9028663635254}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 31.72832489013672}}
+2024-02-20 09:45:03,287 INFO    HandlerThread:16396 [system_monitor.py:probe():211] Finished collecting system info
+2024-02-20 09:45:03,287 INFO    HandlerThread:16396 [system_monitor.py:probe():214] Publishing system info
+2024-02-20 09:45:03,287 DEBUG   HandlerThread:16396 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-02-20 09:45:03,287 DEBUG   HandlerThread:16396 [system_info.py:_save_pip():67] Saving pip packages done
+2024-02-20 09:45:03,288 DEBUG   HandlerThread:16396 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-02-20 09:45:03,859 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_created():271] file/dir created: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\conda-environment.yaml
+2024-02-20 09:45:03,860 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_created():271] file/dir created: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\wandb-summary.json
+2024-02-20 09:45:03,860 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_created():271] file/dir created: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\requirements.txt
+2024-02-20 09:45:11,587 DEBUG   HandlerThread:16396 [system_info.py:_save_conda():86] Saving conda packages done
+2024-02-20 09:45:11,588 INFO    HandlerThread:16396 [system_monitor.py:probe():216] Finished publishing system info
+2024-02-20 09:45:11,598 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:11,598 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-20 09:45:11,599 DEBUG   SenderThread:16396 [sender.py:send():379] send: files
+2024-02-20 09:45:11,599 INFO    SenderThread:16396 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2024-02-20 09:45:11,603 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:45:11,604 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:45:11,884 DEBUG   SenderThread:16396 [sender.py:send():379] send: telemetry
+2024-02-20 09:45:11,896 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\conda-environment.yaml
+2024-02-20 09:45:11,896 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_created():271] file/dir created: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:11,897 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_created():271] file/dir created: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\wandb-metadata.json
+2024-02-20 09:45:12,546 INFO    wandb-upload_0:16396 [upload_job.py:push():131] Uploaded file C:\Users\Administrator\AppData\Local\Temp\tmp40iwwqjrwandb\vca5vfu0-wandb-metadata.json
+2024-02-20 09:45:12,894 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:13,920 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:17,953 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:18,494 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:19,982 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:21,992 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:24,013 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:24,052 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:26,021 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:26,612 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:45:26,613 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:45:28,028 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:29,540 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:30,033 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:32,062 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:34,079 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:35,062 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:36,083 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:36,084 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\config.yaml
+2024-02-20 09:45:38,094 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:40,105 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:40,674 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:41,610 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:45:41,610 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:45:42,120 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:44,132 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:45,923 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:46,143 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:48,157 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:50,164 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:51,611 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:52,172 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:54,184 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:56,209 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:45:56,622 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:45:56,622 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:45:56,884 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:45:58,215 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:00,223 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:02,233 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:02,342 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:03,231 DEBUG   SystemMonitor:16396 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2024-02-20 09:46:03,232 DEBUG   SenderThread:16396 [sender.py:send():379] send: stats
+2024-02-20 09:46:04,254 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:06,264 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:07,809 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:08,283 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:11,637 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:46:11,638 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:46:12,973 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:14,325 INFO    Thread-16 :16396 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\wandb\run-20240220_094501-v3w0r4jz\files\output.log
+2024-02-20 09:46:18,950 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:23,994 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:26,667 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:46:26,668 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:46:29,966 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:33,239 DEBUG   SenderThread:16396 [sender.py:send():379] send: stats
+2024-02-20 09:46:35,255 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:40,298 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:41,697 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-20 09:46:41,698 DEBUG   SenderThread:16396 [sender.py:send_request():406] send_request: stop_status
+2024-02-20 09:46:46,038 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report
+2024-02-20 09:46:51,076 DEBUG   HandlerThread:16396 [handler.py:handle_request():144] handle_request: status_report

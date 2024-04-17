@@ -1,0 +1,73 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.10.8",
+    "heartbeatAt": "2024-02-20T08:09:18.095502",
+    "startedAt": "2024-02-20T08:09:17.163979",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--mode",
+        "ft",
+        "--dataset",
+        "0",
+        "--test_data",
+        "1",
+        "--lr",
+        "1e-5",
+        "--weight_decay",
+        "0.2",
+        "--beta1",
+        "0.9",
+        "--beta2",
+        "0.98",
+        "--eps",
+        "1e-6",
+        "--nepoch",
+        "30",
+        "--batchsize",
+        "16",
+        "--test_batchsize",
+        "16"
+    ],
+    "state": "running",
+    "program": "D:\\ML\\Projects\\MyTransferLearning-wangjindong-\\code\\Myclip\\main.py",
+    "codePath": "code\\Myclip\\main.py",
+    "git": {
+        "remote": "https://github.com/yzh-dev/MyTransferLearning-wangjindong-.git",
+        "commit": "87b82a2a62bc251e620bc193365b45a9d7606365"
+    },
+    "email": "yaozh163@163.com",
+    "root": "D:/ML/Projects/MyTransferLearning-wangjindong-",
+    "host": "DESKTOP-BG145PC",
+    "username": "Administrator",
+    "executable": "C:\\ProgramData\\Anaconda3\\envs\\mmlab\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2496.0,
+        "min": 0.0,
+        "max": 2496.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2496.0,
+            "min": 0.0,
+            "max": 2496.0
+        }
+    ],
+    "disk": {
+        "total": 553.2424964904785,
+        "used": 350.6044464111328
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 31.72832489013672
+    }
+}

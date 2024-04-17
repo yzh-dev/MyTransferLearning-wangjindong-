@@ -7,3 +7,5 @@ code/.DS_Store
 *.pkl
 outputs/
 __pycache__/
+/code/clip/log/
+/code/Myclip/log/

@@ -19,8 +19,7 @@ class ERM(Algorithm):
         self.classifier = common_network.feat_classifier(
             args.num_classes, self.featurizer.in_features, args.classifier)
 
-        self.network = nn.Sequential(
-            self.featurizer, self.classifier)
+        self.network = nn.Sequential(self.featurizer, self.classifier)
 
     def update(self, minibatches, opt, sch):
         all_x = torch.cat([data[0].cuda().float() for data in minibatches])

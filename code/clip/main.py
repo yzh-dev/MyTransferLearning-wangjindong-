@@ -8,14 +8,17 @@ import torch.optim as optim
 from clip_model import ClipModel
 from data.data_loader import ImageTextData
 from utils import gather_res, get_logger, set_gpu, set_seed
+import wandb
+# RuntimeError: Unable to find a valid cuDNN algorithm to run convolution
+torch.backends.cudnn.benchmark = True
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gpu', type=int, default=3)
+    parser.add_argument('--gpu', type=int, default=0)
     parser.add_argument('--mode', type=str, choices=['zs', 'fe', 'ft'], default='ft') # zeroshot, feature extraction, fine-tuning
-    parser.add_argument('--dataset', type=int, default=16) 
-    parser.add_argument('--model', type=int, default=2)  # -1 for sweep
-    parser.add_argument('--root', type=str, default='/data/jindwang/')  # root path of dataset
+    parser.add_argument('--dataset', type=int, default=0)
+    parser.add_argument('--model', type=int, default=0)  # -1 for sweep
+    parser.add_argument('--root', type=str, default='D:\ML\Dataset/')  # root path of dataset
     parser.add_argument('--log_file', type=str, default='log.txt')
     parser.add_argument('--seed', type=int, default=42) # random seed
     parser.add_argument('--result', action='store_true')  # if you want to sweep results statistics
@@ -27,8 +30,8 @@ def get_args():
     parser.add_argument('--eps', type=float, default=1e-6)
     parser.add_argument('--weight_decay', type=float, default=0.2)
     ## the following test data and test batchsize are only used for fine-tuning mode
-    parser.add_argument('--test_batchsize', type=int, default=1024)
-    parser.add_argument('--test_data', type=int, default=17)
+    parser.add_argument('--test_batchsize', type=int, default=32)
+    parser.add_argument('--test_data', type=int, default=1)
     args = parser.parse_args()
     return args
 
@@ -59,10 +62,17 @@ def main(args):
         feat_file = 'feat/{}_{}_{}.csv'.format(args.mode, model_name, dataset_name)
         np.savetxt(feat_file, res, fmt='%.4f')
     elif args.mode == 'ft': # fine-tuning
+        wandb.init(
+            project="Clip-eft",
+            name="Ted{}".format(
+                args.test_data,
+            ),
+            config=vars(args)  # namespace to dict
+        )
         test_data = ImageTextData(args.test_data, root=args.root, preprocess=clip.preprocess)
         test_loader = torch.utils.data.DataLoader(test_data, batch_size=args.test_batchsize, shuffle=False, drop_last=False)
         optimizer = optim.Adam(clip.model.parameters(), lr=args.lr, betas=(args.beta1, args.beta2), eps=args.eps, weight_decay=args.weight_decay)
-        best_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='/home/jindwang/mine/clipood/model/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
+        best_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='./log/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
         logger.info('Accuracy: {:.2f}%'.format(best_acc * 100))
     else:
         raise NotImplementedError

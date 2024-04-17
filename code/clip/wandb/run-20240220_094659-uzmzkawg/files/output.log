@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 76/76 [00:43<00:00,  1.73it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 137/137 [00:35<00:00,  3.88it/s]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\IPython\core\interactiveshell.py", line 3442, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-2-7fec92a33812>", line 1, in <module>
+    runfile('D:\\ML\\Projects\\MyTransferLearning-wangjindong-\\code\\clip\\main.py', wdir='D:\\ML\\Projects\\MyTransferLearning-wangjindong-\\code\\clip')
+  File "C:\Program Files\JetBrains\PyCharm 2022.3.3\plugins\python\helpers\pydev\_pydev_bundle\pydev_umd.py", line 198, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+  File "C:\Program Files\JetBrains\PyCharm 2022.3.3\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\main.py", line 117, in <module>
+    sweep(args.model, args.dataset)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\main.py", line 110, in sweep
+    main(args)
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\main.py", line 75, in main
+    best_acc = clip.finetune(train_loader, test_loader, optimizer, args.nepoch, save_path='./log/{}_{}_{}.pt'.format(args.mode, model_name, dataset_name))
+  File "D:\ML\Projects\MyTransferLearning-wangjindong-\code\clip\clip_model.py", line 134, in finetune
+    wandb.log({"Loss": total_loss/len(dataloader), "Accuracy": eval_acc})
+NameError: name 'wandb' is not defined
