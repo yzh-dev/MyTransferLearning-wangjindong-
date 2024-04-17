@@ -67,69 +67,42 @@ Related Codes:
 - By topic: [doc/awesome_papers.md](/doc/awesome_paper.md)
 - By date: [doc/awesome_paper_date.md](/doc/awesome_paper_date.md)
 
-*Updated at 2024-01-26:*
+*Updated at 2024-04-16:*
 
-- Facing the Elephant in the Room: Visual Prompt Tuning or Full Finetuning? [[arxiv](https://arxiv.org/abs/2401.12902)]
-  - A comparison between visual prompt tuning and full finetuning 比较prompt tuning和全finetune
+- DGMamba: Domain Generalization via Generalized State Space Model [[arXiv](https://arxiv.org/abs/2404.07794)]
+  - Domain generalization using mamba 用Mamba结构进行DG
 
-- Out-of-Distribution Detection & Applications With Ablated Learned Temperature Energy [[arxiv](https://arxiv.org/abs/2401.12129)]
-  - OOD detection for ablated learned temperature energy
+- CVPR'24 Unified Language-driven Zero-shot Domain Adaptation [[arxiv](https://arxiv.org/abs/2404.07155)]
+  - Language-driven zero-shot domain adaptation 语言驱动的零样本 DA
 
-- LanDA: Language-Guided Multi-Source Domain Adaptation [[arxiv](https://arxiv.org/abs/2401.14148)]
-  - Language guided multi-source DA  在多源域自适应中使用语言指导
+*Updated at 2024-04-01:*
 
-- AdaEmbed: Semi-supervised Domain Adaptation in the Embedding Space [[arxiv](https://arxiv.org/abs/2401.12421)]
-  - Semi-spuervised domain adaptation in the embedding space 在嵌入空间中进行半监督域自适应
+- ICASSP'24 Learning Inference-Time Drift Sensor-Actuator for Domain Generalization [[IEEE](https://ieeexplore.ieee.org/abstract/document/10447537?casa_token=6xrw2hE7cVEAAAAA:9i_ITqbfyLTzQYjdp4Oi16ziD8uheMMZJHRn4gHmzl9nN_j2c5u8MBxUtYYdzlj1Vn4l8F5OJnrw3BY)]
+  - Inference-time drift actuator for OOD generalization
 
-- Inter-Domain Mixup for Semi-Supervised Domain Adaptation [[arxiv](https://arxiv.org/abs/2401.11453)]
-  - Inter-domain mixup for semi-supervised domain adaptation 跨领域mixup用于半监督域自适应
+- ICASSP'24 SBM: Smoothness-Based Minimization for Domain Generalization [[IEEE](https://ieeexplore.ieee.org/abstract/document/10446613?casa_token=kO10uC18NMQAAAAA:6WJvMr57dSMyORMAnBgFGXi01aE_AmIAA6CQINztT7pHG2u8RmojDxMdV09UO6O9IfFsVEJDrYl1uiU)]
+  - Smoothness-based minimization for OOD generalization
 
-- Source-Free and Image-Only Unsupervised Domain Adaptation for Category Level Object Pose Estimation [[arxiv](https://arxiv.org/abs/2401.10848)]
-  - Source-free and image-only unsupervised domain adaptation 
+- ICASSP'24 G2G: Generalized Learning by Cross-Domain Knowledge Transfer for Federated Domain Generalization [[IEEE](https://ieeexplore.ieee.org/abstract/document/10447043?casa_token=ihJ_LaxqnfUAAAAA:8Petax0UdQ9bvJLrRbFrujWcVjDzIckhYLDvIk-rUZxo-S7pa6xgbGBxkLWjs8c8H1jR4E8Rop8e7cc)]
+  - Federated domain generalization
 
-*Updated at 2024-01-17:*
+- ICASSP'24 Single-Source Domain Generalization in Fundus Image Segmentation Via Moderating and Interpolating Input Space Augmentation [[IEEE](https://ieeexplore.ieee.org/abstract/document/10447741?casa_token=t0FGpPfYxeoAAAAA:yyZ1zKhXstoaxNOtP6zKBj1ArLF8JZ7gGQOtR-k6DAHCO9SWTIOwLG5TF71BrcenWvO002MYku-wtQI)]
+  - Single-source DG in fundus image segmentation
 
-- ICLR'24 spotlight Understanding and Mitigating the Label Noise in Pre-training on Downstream Tasks [[arxiv](https://arxiv.org/abs/2309.17002)]
-  - A new research direction of transfer learning in the era of foundation models 大模型时代一个新研究方向：研究预训练数据的噪声对下游任务影响
+- ICASSP'24 Style Factorization: Explore Diverse Style Variation for Domain Generalization [[IEEE](https://ieeexplore.ieee.org/abstract/document/10447540?casa_token=inLqNDEGEjQAAAAA:7jNUOViyS9PIn-BwIV0LJ-5oCzmM7BXpMLfyLosedaxmxZ-_c_2sA615GlCgrlwaspjdVKa4eogm6Z4)]
+  - Style variation for domain generalization
 
-- ICLR'24 Supervised Knowledge Makes Large Language Models Better In-context Learners [[arxiv](https://arxiv.org/abs/2312.15918)]
-  - Small models help large language models for better OOD 用小模型帮助大模型进行更好的OOD
+- ICASSP'24 SPDG-Net: Semantics Preserving Domain Augmentation through Style Interpolation for Multi-Source Domain Generalization [[IEEE](https://ieeexplore.ieee.org/abstract/document/10447210?casa_token=NSBeXUg0AdUAAAAA:4rrMR38UcDN2YRzD9Fvm42gT3dyEX5lO0arFkmVIu3VwQLT9UFLAmU3a5ZOfxtr812_Fic1SCcw9mr0)]
+  - Domain augmentation for multi-source DG
 
-*Updated at 2024-01-16:*
+- ICASSP'24 Domaindiff: Boost out-of-Distribution Generalization with Synthetic Data [[IEEE](https://ieeexplore.ieee.org/abstract/document/10446788?casa_token=Rh3MGM6szOQAAAAA:0GRegU3dIidLVvIYtJb97m2ZDCl0wwKVTmTZH7XTE0fzEBmRuwJHSn_T1U6NgwSYHFPKlWHox_BO4Eg)]
+  - Using synthetic data for OOD generalization
 
-- NeurIPS'23 Geodesic Multi-Modal Mixup for Robust Fine-Tuning [[paper](https://openreview.net/forum?id=iAAXq60Bw1)]
-  - Geodesic mixup for robust fine-tuning
+- ICASSP'24 Multi-Level Augmentation Consistency Learning and Sample Selection for Semi-Supervised Domain Generalization [[IEEE](https://ieeexplore.ieee.org/abstract/document/10446462?casa_token=vfAJ1GINr0AAAAAA:YS4NVt-kR8-sJqhfo6H7d04ZmckxUUpsIYuy2agnB4IpgCnR7xOzyrNv59MZ2lcbVhNvsN6Cl4p_7YI)]
+  - Multi-level augmentation for semi-supervised domain generalization
 
-- NeurIPS'23 Parameter and Computation Efficient Transfer Learning for Vision-Language Pre-trained Models [[paper](https://openreview.net/forum?id=TPeAmxwPK2)]
-  - Parameter and computation efficient transfer learning by reinforcement learning
-
-- NeurIPS'23 Test-Time Distribution Normalization for Contrastively Learned Visual-language Models [[paper](https://openreview.net/forum?id=VKbEO2eh5w)]
-  - Test-time distribution normalization for contrastively learned VLM
-
-- NeurIPS'23 A Closer Look at the Robustness of Contrastive Language-Image Pre-Training (CLIP) [[paper](https://openreview.net/forum?id=wMNpMe0vp3)]
-  - A fine-gained analysis of CLIP robustness
-
-- NeurIPS'23 When Visual Prompt Tuning Meets Source-Free Domain Adaptive Semantic Segmentation [[paper](https://openreview.net/forum?id=ChGGbmTNgE)]
-  - Source-free domain adaptation using visual prompt tuning
- 
-*Updated at 2024-01-08:*
-
-- NeurIPS'23 CODA: Generalizing to Open and Unseen Domains with Compaction and Disambiguation [[arxiv](https://openreview.net/forum?id=Jw0KRTjsGA)]
-  - Open set domain generalization using extra classes
-
-*Updated at 2024-01-05:*
-
-- CPAL'24 FIXED: Frustratingly Easy Domain Generalization with Mixup [[arxiv](https://arxiv.org/abs/2211.05228)]
-  - Easy domain generalization with mixup
-
-- SDM'24 Towards Optimization and Model Selection for Domain Generalization: A Mixup-guided Solution [[arxiv](https://arxiv.org/abs/2209.00652)]
-  - Optimization and model selection for domain generalization
-
-- Leveraging SAM for Single-Source Domain Generalization in Medical Image Segmentation [[arxiv](https://arxiv.org/abs/2401.02076)]
-  - SAM for single-source domain generalization
-
-- Multi-Source Domain Adaptation with Transformer-based Feature Generation for Subject-Independent EEG-based Emotion Recognition [[arxiv](https://arxiv.org/abs/2401.02344)]
-  - Multi-source DA with Transformer-based feature generation
+- ICASSP'24 MMS: Morphology-Mixup Stylized Data Generation for Single Domain Generalization in Medical Image Segmentation [[IEEE](https://ieeexplore.ieee.org/abstract/document/10448305?casa_token=14-2Vm39RD4AAAAA:Zmzm9KTl3INP2I83T2MLwQXtHUZKwXYfhDOPU9F0Eu9SrznInqGpSBrMYH0ek3eemDKdyL4bBU6EVaY)]
+  - Morphology-mixup for domain generalization
 
 - - -
 
