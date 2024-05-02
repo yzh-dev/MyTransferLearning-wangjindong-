@@ -4,6 +4,7 @@ import torch.nn.functional as F
 from alg.algs.ERM import ERM
 
 
+# _21 ICML VREx_Out-of-Distribution Generalization via Risk Extrapolation (REx).pdf
 class VREx(ERM):
     """V-REx algorithm from http://arxiv.org/abs/2003.00688"""
 
@@ -25,15 +26,14 @@ class VREx(ERM):
         all_logits_idx = 0
         losses = torch.zeros(len(minibatches))
 
-        for i, data in enumerate(minibatches):
-            logits = all_logits[all_logits_idx:all_logits_idx +
-                                data[0].shape[0]]
+        for i, data in enumerate(minibatches):  # 迭代不同domain
+            logits = all_logits[all_logits_idx:all_logits_idx + data[0].shape[0]]
             all_logits_idx += data[0].shape[0]
             nll = F.cross_entropy(logits, data[1].cuda().long())
-            losses[i] = nll
+            losses[i] = nll  # 计算该domain下的loss
 
-        mean = losses.mean()
-        penalty = ((losses - mean) ** 2).mean()
+        mean = losses.mean()  # mean loss of different domains
+        penalty = ((losses - mean) ** 2).mean()  # 等价于将不同domain下loss的方差作为惩罚系数，强制模型在不同domain下损失尽量相同
         loss = mean + penalty_weight * penalty
 
         opt.zero_grad()

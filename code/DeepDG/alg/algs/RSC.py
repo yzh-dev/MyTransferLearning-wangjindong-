@@ -7,6 +7,7 @@ import torch.autograd as autograd
 from alg.algs.ERM import ERM
 
 
+# Huang, Zeyi, et al. "Self-challenging improves cross-domain generalization." ECCV 2020.
 class RSC(ERM):
     def __init__(self, args):
         super(RSC, self).__init__(args)
@@ -22,14 +23,14 @@ class RSC(ERM):
         all_p = self.classifier(all_f)
 
         # Equation (1): compute gradients with respect to representation
-        all_g = autograd.grad((all_p * all_o).sum(), all_f)[0]
+        all_g = autograd.grad((all_p * all_o).sum(), all_f)[0]  # 关于feat的梯度, batch*fit_dim
 
         # Equation (2): compute top-gradient-percentile mask
-        percentiles = np.percentile(all_g.cpu(), self.drop_f, axis=1)
+        percentiles = np.percentile(all_g.cpu(), self.drop_f, axis=1)  # 提取top-gradient
         percentiles = torch.Tensor(percentiles)
         percentiles = percentiles.unsqueeze(1).repeat(1, all_g.size(1))
         mask_f = all_g.lt(percentiles.cuda()).float()
-
+        # 特征层面，mute top-gradient-percentile feat
         # Equation (3): mute top-gradient-percentile activations
         all_f_muted = all_f * mask_f
 
@@ -37,12 +38,12 @@ class RSC(ERM):
         all_p_muted = self.classifier(all_f_muted)
 
         # Section 3.3: Batch Percentage
-        all_s = F.softmax(all_p, dim=1)
-        all_s_muted = F.softmax(all_p_muted, dim=1)
-        changes = (all_s * all_o).sum(1) - (all_s_muted * all_o).sum(1)
+        all_s = F.softmax(all_p, dim=1)  # 完整预测: batch*num_class
+        all_s_muted = F.softmax(all_p_muted, dim=1)  # 忽略部分特征后的预测: batch*num_class
+        changes = (all_s * all_o).sum(1) - (all_s_muted * all_o).sum(1)  # loss的差值
         percentile = np.percentile(changes.detach().cpu(), self.drop_b)
         mask_b = changes.lt(percentile).float().view(-1, 1)
-        mask = torch.logical_or(mask_f, mask_b).float()
+        mask = torch.logical_or(mask_f, mask_b).float()  # or运算
 
         # Equations (3) and (4) again, this time mutting over examples
         all_p_muted_again = self.classifier(all_f * mask)

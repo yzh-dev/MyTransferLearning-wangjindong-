@@ -26,8 +26,7 @@ class feat_classifier(nn.Module):
         super(feat_classifier, self).__init__()
         self.type = type
         if type == 'wn':
-            self.fc = weightNorm(
-                nn.Linear(bottleneck_dim, class_num), name="weight")
+            self.fc = weightNorm(nn.Linear(bottleneck_dim, class_num), name="weight")
             # self.fc.apply(init_weights)
         else:
             self.fc = nn.Linear(bottleneck_dim, class_num)

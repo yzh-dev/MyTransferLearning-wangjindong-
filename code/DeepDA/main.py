@@ -7,7 +7,8 @@ import utils
 from utils import str2bool
 import numpy as np
 import random
-
+# RuntimeError: Unable to find a valid cuDNN algorithm to run convolution
+torch.backends.cudnn.benchmark = True
 def get_parser():
     """Get default arguments."""
     parser = configargparse.ArgumentParser(
@@ -16,7 +17,9 @@ def get_parser():
         formatter_class=configargparse.ArgumentDefaultsHelpFormatter,
     )
     # general configuration
-    parser.add("--config", is_config_file=True, help="config file path")
+    # parser.add("--config", is_config_file=True,default="DeepCoral/DeepCoral.yaml", help="config file path")
+    parser.add("--config", is_config_file=True,default="DAN/DAN.yaml", help="config file path")
+    # parser.add("--config", is_config_file=True,default="DSAN/DSAN.yaml", help="config file path")
     parser.add("--seed", type=int, default=0)
     parser.add_argument('--num_workers', type=int, default=0)
     
@@ -25,12 +28,12 @@ def get_parser():
     parser.add_argument('--use_bottleneck', type=str2bool, default=True)
 
     # data loading related
-    parser.add_argument('--data_dir', type=str, required=True)
-    parser.add_argument('--src_domain', type=str, required=True)
-    parser.add_argument('--tgt_domain', type=str, required=True)
+    parser.add_argument('--data_dir', type=str, default="D:\ML\Dataset\office31")
+    parser.add_argument('--src_domain', type=str, default="dslr")
+    parser.add_argument('--tgt_domain', type=str, default="amazon")
     
     # training related
-    parser.add_argument('--batch_size', type=int, default=32)
+    parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--n_epoch', type=int, default=100)
     parser.add_argument('--early_stop', type=int, default=0, help="Early stopping")
     parser.add_argument('--epoch_based_training', type=str2bool, default=False, help="Epoch-based training / Iteration-based training")

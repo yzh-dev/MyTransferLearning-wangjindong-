@@ -6,6 +6,7 @@ from datautil.util import random_pairs_of_minibatches
 from alg.algs.ERM import ERM
 
 
+# _17 ICLR mixup_Beyond empirical risk minimization.pdf
 class Mixup(ERM):
     def __init__(self, args):
         super(Mixup, self).__init__(args)
@@ -16,14 +17,13 @@ class Mixup(ERM):
 
         for (xi, yi, di), (xj, yj, dj) in random_pairs_of_minibatches(self.args, minibatches):
             lam = np.random.beta(self.args.mixupalpha, self.args.mixupalpha)
-
+            # feat混合
             x = (lam * xi + (1 - lam) * xj).cuda().float()
 
             predictions = self.predict(x)
-
+            # loss混合
             objective += lam * F.cross_entropy(predictions, yi.cuda().long())
-            objective += (1 - lam) * \
-                F.cross_entropy(predictions, yj.cuda().long())
+            objective += (1 - lam) * F.cross_entropy(predictions, yj.cuda().long())
 
         objective /= len(minibatches)
 

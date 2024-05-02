@@ -8,6 +8,7 @@ from network import Adver_network, common_network
 from alg.algs.base import Algorithm
 
 
+# _16 JMLR DANN Domain-Adversarial Training of Neural Networks.pdf
 class DANN(Algorithm):
 
     def __init__(self, args):
@@ -31,10 +32,8 @@ class DANN(Algorithm):
             disc_input, self.args.alpha)
         disc_out = self.discriminator(disc_input)
         disc_labels = torch.cat([
-            torch.full((data[0].shape[0], ), i,
-                       dtype=torch.int64, device='cuda')
-            for i, data in enumerate(minibatches)
-        ])
+            torch.full((data[0].shape[0], ), i, dtype=torch.int64, device='cuda')
+            for i, data in enumerate(minibatches)])
 
         disc_loss = F.cross_entropy(disc_out, disc_labels)
         all_preds = self.classifier(all_z)
