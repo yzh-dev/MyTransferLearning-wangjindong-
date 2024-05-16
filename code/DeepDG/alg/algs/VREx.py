@@ -10,7 +10,7 @@ class VREx(ERM):
 
     def __init__(self, args):
         super(VREx, self).__init__(args)
-        self.register_buffer('update_count', torch.tensor([0]))
+        self.register_buffer('update_count', torch.tensor([0]))  # 初始化为0
         self.args = args
 
     def update(self, minibatches, opt, sch):
@@ -43,5 +43,5 @@ class VREx(ERM):
             sch.step()
 
         self.update_count += 1
-        return {'loss': loss.item(), 'nll': nll.item(),
+        return {'total': loss.item(), 'domains_mean': mean.item(),
                 'penalty': penalty.item()}

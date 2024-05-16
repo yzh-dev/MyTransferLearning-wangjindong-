@@ -28,7 +28,7 @@ class ANDMask(ERM):
             total_loss += env_loss
             # 计算当前domain下反传获取到的梯度env_grads
             env_grads = autograd.grad(env_loss, self.network.parameters(), retain_graph=True)
-            for grads, env_grad in zip(param_gradients, env_grads):
+            for grads, env_grad in zip(param_gradients, env_grads):  # 保存不同domain下的grad
                 grads.append(env_grad)
 
         mean_loss = total_loss / len(minibatches)

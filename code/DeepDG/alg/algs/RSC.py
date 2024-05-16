@@ -45,7 +45,7 @@ class RSC(ERM):
         mask_b = changes.lt(percentile).float().view(-1, 1)
         mask = torch.logical_or(mask_f, mask_b).float()  # or运算
 
-        # Equations (3) and (4) again, this time mutting over examples
+        # Equations (3) and (4) again, this time muting over examples
         all_p_muted_again = self.classifier(all_f * mask)
 
         # Equation (5): update

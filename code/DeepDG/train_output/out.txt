@@ -2447,3 +2447,2893 @@ num_classes:7
 domain_num:4
 
 ===========start training===========
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\pydevd.py", line 1534, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 77, in <module>
+    train_loaders, eval_loaders = get_img_dataloader(args)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\getdataloader.py", line 22, in get_img_dataloader
+    tmpdatay = ImageDataset(args.dataset, args.task, args.data_dir,
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\imgdata\imgdataload.py", line 12, in __init__
+    self.imgs = ImageFolder(root_dir+domain_name).imgs
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 309, in __init__
+    super().__init__(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 218, in find_classes
+    return find_classes(directory)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\ML\\Dataset\\OfficeHome\\Real_World'
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\pydevd.py", line 1534, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 77, in <module>
+    train_loaders, eval_loaders = get_img_dataloader(args)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\getdataloader.py", line 22, in get_img_dataloader
+    tmpdatay = ImageDataset(args.dataset, args.task, args.data_dir,
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\imgdata\imgdataload.py", line 12, in __init__
+    self.imgs = ImageFolder(root_dir+domain_name).imgs
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 309, in __init__
+    super().__init__(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 218, in find_classes
+    return find_classes(directory)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\ML\\Dataset\\OfficeHome\\Real_World'
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:1
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:1
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.01
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:20
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 111, in <module>
+    print('===========start training===========')
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\ERM.py", line 26, in update
+    all_y = torch.cat([data[1].cuda().long() for data in minibatches])
+KeyboardInterrupt
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 76, in <module>
+    wandb.init(
+KeyboardInterrupt
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_165323-zq3z8w3i
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/zq3z8w3i
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:1
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:1
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+class_loss:2.7451
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 136, in <module>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 136, in <listcomp>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\modelopera.py", line 22, in accuracy
+    for data in loader:
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 335, in _poll
+    return bool(wait([self], timeout))
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 884, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 816, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+KeyboardInterrupt
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_172323-b5xnpia6
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/b5xnpia6
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:1
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:1
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+class_loss:2.7451
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_173141-i0ibl8k4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/i0ibl8k4
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:1
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:1
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+class_loss:2.7451
+class_loss:1.8659
+class_loss:1.4406
+class_loss:1.1159
+class_loss:1.0844
+class_loss:0.9685
+class_loss:0.7303
+class_loss:0.8403
+class_loss:0.6039
+class_loss:0.6141
+class_loss:0.6262
+class_loss:0.6145
+class_loss:0.4435
+class_loss:0.5082
+class_loss:0.4233
+class_loss:0.4253
+class_loss:0.4196
+class_loss:0.3471
+class_loss:0.4146
+class_loss:0.3107
+class_loss:0.2826
+manually descrease lr
+class_loss:0.2453
+class_loss:0.2930
+class_loss:0.2838
+class_loss:0.2282
+class_loss:0.2326
+class_loss:0.2044
+manually descrease lr
+class_loss:0.2539
+class_loss:0.2129
+class_loss:0.1711
+train_acc:0.9614,valid_acc:0.7911,target_acc:0.4852
+total cost time: 960.5157
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_175132-pf6j5q3o
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/pf6j5q3o
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:1
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:120
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+class_loss:2.7451
+train_acc:0.4666,valid_acc:0.4319,target_acc:0.2740
+total cost time: 226.7933
+===========epoch 3===========
+class_loss:1.0848
+train_acc:0.7504,valid_acc:0.7009,target_acc:0.4330
+total cost time: 516.6532
+===========epoch 6===========
+class_loss:1.0353
+train_acc:0.8245,valid_acc:0.7430,target_acc:0.4561
+total cost time: 796.0282
+===========epoch 9===========
+class_loss:0.6192
+train_acc:0.8656,valid_acc:0.7712,target_acc:0.4850
+total cost time: 1078.4599
+===========epoch 12===========
+class_loss:0.5040
+train_acc:0.8978,valid_acc:0.7838,target_acc:0.4756
+total cost time: 1360.2494
+===========epoch 15===========
+class_loss:0.3233
+train_acc:0.9216,valid_acc:0.7840,target_acc:0.4871
+total cost time: 1637.9105
+===========epoch 18===========
+class_loss:0.2271
+train_acc:0.9436,valid_acc:0.7934,target_acc:0.4930
+total cost time: 1916.2237
+===========epoch 21===========
+class_loss:0.2024
+train_acc:0.9528,valid_acc:0.7940,target_acc:0.4882
+total cost time: 2196.0719
+===========epoch 24===========
+class_loss:0.2087
+train_acc:0.9637,valid_acc:0.8041,target_acc:0.4898
+total cost time: 2472.9257
+===========epoch 27===========
+class_loss:0.1077
+train_acc:0.9729,valid_acc:0.8001,target_acc:0.4848
+total cost time: 2746.4418
+===========epoch 30===========
+class_loss:0.2132
+train_acc:0.9797,valid_acc:0.8006,target_acc:0.4864
+total cost time: 3023.2173
+===========epoch 33===========
+class_loss:0.1068
+train_acc:0.9829,valid_acc:0.8024,target_acc:0.4832
+total cost time: 3298.9224
+===========epoch 36===========
+class_loss:0.1095
+train_acc:0.9868,valid_acc:0.7967,target_acc:0.4893
+total cost time: 3573.2600
+===========epoch 39===========
+class_loss:0.0703
+train_acc:0.9885,valid_acc:0.7989,target_acc:0.4813
+total cost time: 3848.6346
+===========epoch 42===========
+class_loss:0.0937
+train_acc:0.9883,valid_acc:0.8004,target_acc:0.4852
+total cost time: 4123.5085
+===========epoch 45===========
+class_loss:0.0933
+train_acc:0.9915,valid_acc:0.8015,target_acc:0.4829
+total cost time: 4398.7501
+===========epoch 48===========
+class_loss:0.0526
+train_acc:0.9934,valid_acc:0.7989,target_acc:0.4898
+total cost time: 4673.1535
+===========epoch 51===========
+class_loss:0.0548
+train_acc:0.9930,valid_acc:0.7983,target_acc:0.4880
+total cost time: 4950.0434
+===========epoch 54===========
+class_loss:0.0562
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 138, in <module>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 138, in <listcomp>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\modelopera.py", line 22, in accuracy
+    for data in loader:
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 335, in _poll
+    return bool(wait([self], timeout))
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 884, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 816, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+KeyboardInterrupt
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_192204-kcsokl1h
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run GroupDRO-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/kcsokl1h
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:GroupDRO
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:120
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+group_loss:2.9096
+train_acc:0.4332,valid_acc:0.4058,target_acc:0.2543
+total cost time: 227.3011
+===========epoch 3===========
+group_loss:1.2280
+train_acc:0.7323,valid_acc:0.6839,target_acc:0.4289
+total cost time: 502.6915
+===========epoch 6===========
+group_loss:1.1597
+train_acc:0.8054,valid_acc:0.7332,target_acc:0.4660
+total cost time: 775.3182
+===========epoch 9===========
+group_loss:0.6998
+train_acc:0.8550,valid_acc:0.7501,target_acc:0.4889
+total cost time: 1050.2333
+===========epoch 12===========
+group_loss:0.6156
+train_acc:0.8852,valid_acc:0.7713,target_acc:0.4804
+total cost time: 1326.2318
+===========epoch 15===========
+group_loss:0.4077
+train_acc:0.9059,valid_acc:0.7803,target_acc:0.4880
+total cost time: 1601.0887
+===========epoch 18===========
+group_loss:0.2999
+train_acc:0.9244,valid_acc:0.7873,target_acc:0.5022
+total cost time: 1876.2273
+===========epoch 21===========
+group_loss:0.2596
+train_acc:0.9411,valid_acc:0.7861,target_acc:0.4944
+total cost time: 2153.2986
+===========epoch 24===========
+group_loss:0.2583
+train_acc:0.9490,valid_acc:0.7874,target_acc:0.4960
+total cost time: 2430.5334
+===========epoch 27===========
+group_loss:0.1498
+train_acc:0.9614,valid_acc:0.7913,target_acc:0.5010
+total cost time: 2705.0201
+===========epoch 30===========
+group_loss:0.2373
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_202411-x7wgjgym
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run DANN-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/x7wgjgym
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:DANN
+alpha:0.1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 2.704474449157715, 'dis_loss': 0.869652509689331, 'total_loss': 3.574126958847046}
+{'train_acc': 0.4490513245652085, 'valid_acc': 0.42535144726785906, 'target_acc': 0.26597938144329897}
+total cost time: 226.1087
+===========epoch 3===========
+{'class_loss': 1.1726711988449097, 'dis_loss': 0.732501208782196, 'total_loss': 1.905172348022461}
+{'train_acc': 0.7517176312093611, 'valid_acc': 0.7038128002280227, 'target_acc': 0.4366552119129439}
+total cost time: 502.2578
+===========epoch 6===========
+{'class_loss': 0.6642038226127625, 'dis_loss': 0.6081936955451965, 'total_loss': 1.272397518157959}
+{'train_acc': 0.8243114935448341, 'valid_acc': 0.754128703967304, 'target_acc': 0.4657502863688431}
+total cost time: 779.8019
+===========epoch 9===========
+{'class_loss': 0.6663334369659424, 'dis_loss': 0.6307096481323242, 'total_loss': 1.2970430850982666}
+{'train_acc': 0.8656409518727477, 'valid_acc': 0.769634823406485, 'target_acc': 0.48064146620847653}
+total cost time: 1058.9544
+===========epoch 12===========
+{'class_loss': 0.4900743067264557, 'dis_loss': 0.5070136189460754, 'total_loss': 0.9970879554748535}
+{'train_acc': 0.8974794598170583, 'valid_acc': 0.7786437048669465, 'target_acc': 0.47926689576174114}
+total cost time: 1334.6314
+===========epoch 15===========
+{'class_loss': 0.4461030066013336, 'dis_loss': 0.5884193778038025, 'total_loss': 1.0345224142074585}
+{'train_acc': 0.9210894155310737, 'valid_acc': 0.7802749657574667, 'target_acc': 0.48087056128293243}
+total cost time: 1609.6834
+===========epoch 18===========
+{'class_loss': 0.2775169909000397, 'dis_loss': 0.5207926630973816, 'total_loss': 0.7983096837997437}
+{'train_acc': 0.9414967403057272, 'valid_acc': 0.7926731097390288, 'target_acc': 0.4870561282932417}
+total cost time: 1884.4547
+manually descrease lr
+===========epoch 21===========
+{'class_loss': 0.22599124908447266, 'dis_loss': 0.5234710574150085, 'total_loss': 0.7494623064994812}
+{'train_acc': 0.9532644607593443, 'valid_acc': 0.790273326333469, 'target_acc': 0.4868270332187858}
+total cost time: 2158.7476
+===========epoch 24===========
+{'class_loss': 0.22601284086704254, 'dis_loss': 0.43824502825737, 'total_loss': 0.6642578840255737}
+{'train_acc': 0.9587863843437673, 'valid_acc': 0.7962143250964182, 'target_acc': 0.4930126002290951}
+total cost time: 2434.3454
+manually descrease lr
+===========epoch 27===========
+{'class_loss': 0.3294672667980194, 'dis_loss': 0.4486732482910156, 'total_loss': 0.7781405448913574}
+{'train_acc': 0.9611608040806471, 'valid_acc': 0.8000162922011377, 'target_acc': 0.49163802978235965}
+total cost time: 2710.5807
+===========epoch 29===========
+{'class_loss': 0.21293950080871582, 'dis_loss': 0.39518824219703674, 'total_loss': 0.6081277132034302}
+{'train_acc': 0.9647185710067717, 'valid_acc': 0.7961329066069127, 'target_acc': 0.48957617411225657}
+total cost time: 2965.7293
+valid acc: 0.8000
+DG result: 0.4916
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_211512-1cprftuw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Mixup-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/1cprftuw
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:Mixup
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.2861194610595703}
+{'train_acc': 0.3725631669842784, 'valid_acc': 0.3538837852463404, 'target_acc': 0.1997709049255441}
+total cost time: 243.0240
+===========epoch 3===========
+{'class_loss': 1.739467978477478}
+{'train_acc': 0.7085216497647865, 'valid_acc': 0.6700172819778665, 'target_acc': 0.4137457044673539}
+total cost time: 567.9830
+===========epoch 6===========
+{'class_loss': 1.9439929723739624}
+{'train_acc': 0.7832642442878629, 'valid_acc': 0.7208313053114277, 'target_acc': 0.4449026345933562}
+total cost time: 891.9805
+===========epoch 9===========
+{'class_loss': 1.7230724096298218}
+{'train_acc': 0.8290546093117657, 'valid_acc': 0.7576463653595832, 'target_acc': 0.46918671248568156}
+total cost time: 1215.2760
+===========epoch 12===========
+{'class_loss': 0.8969582915306091}
+{'train_acc': 0.8564723580360417, 'valid_acc': 0.7776817762376714, 'target_acc': 0.47079037800687284}
+total cost time: 1540.0726
+===========epoch 15===========
+{'class_loss': 0.7655638456344604}
+{'train_acc': 0.8802587815088142, 'valid_acc': 0.7781592329672521, 'target_acc': 0.4827033218785796}
+total cost time: 1864.9070
+===========epoch 18===========
+{'class_loss': 1.12395441532135}
+{'train_acc': 0.9033276536607303, 'valid_acc': 0.7882224732377638, 'target_acc': 0.5012600229095074}
+total cost time: 2188.4139
+manually descrease lr
+===========epoch 21===========
+{'class_loss': 0.9785252809524536}
+{'train_acc': 0.9158214478683676, 'valid_acc': 0.7890174408183243, 'target_acc': 0.49209621993127145}
+total cost time: 2513.8116
+===========epoch 24===========
+{'class_loss': 0.42582815885543823}
+{'train_acc': 0.9197863209224239, 'valid_acc': 0.7947541493243158, 'target_acc': 0.4941580756013746}
+total cost time: 2840.0511
+manually descrease lr
+===========epoch 27===========
+{'class_loss': 1.3412590026855469}
+{'train_acc': 0.9235063255925428, 'valid_acc': 0.7931299036039098, 'target_acc': 0.49186712485681555}
+total cost time: 3164.5975
+===========epoch 29===========
+{'class_loss': 0.8946808576583862}
+{'train_acc': 0.9254938087680115, 'valid_acc': 0.7945457349976549, 'target_acc': 0.49782359679266897}
+total cost time: 3447.8262
+valid acc: 0.7948
+DG result: 0.4942
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_221412-3rdkxv1x
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run RSC-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/3rdkxv1x
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:RSC
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.1
+rsc_b_drop_factor:0.1
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.100212335586548}
+{'train_acc': 0.4651359060736224, 'valid_acc': 0.4316443949896209, 'target_acc': 0.26918671248568155}
+total cost time: 230.5648
+===========epoch 3===========
+{'class_loss': 1.3325461149215698}
+{'train_acc': 0.742640897929764, 'valid_acc': 0.6962847574043632, 'target_acc': 0.4309278350515464}
+total cost time: 516.1135
+===========epoch 6===========
+{'class_loss': 1.2946372032165527}
+{'train_acc': 0.8170473375810382, 'valid_acc': 0.7491730602501924, 'target_acc': 0.4549828178694158}
+total cost time: 800.5589
+===========epoch 9===========
+{'class_loss': 0.8897049427032471}
+{'train_acc': 0.8593556299725286, 'valid_acc': 0.7665836070525164, 'target_acc': 0.47972508591065294}
+total cost time: 1083.7944
+===========epoch 12===========
+{'class_loss': 0.7513373494148254}
+{'train_acc': 0.8893042963456216, 'valid_acc': 0.7801106407120679, 'target_acc': 0.47697594501718216}
+total cost time: 1368.2279
+===========epoch 15===========
+{'class_loss': 0.5992122292518616}
+{'train_acc': 0.9119117171293456, 'valid_acc': 0.7793158006800548, 'target_acc': 0.49095074455899196}
+total cost time: 1652.7839
+===========epoch 18===========
+{'class_loss': 0.45389047265052795}
+{'train_acc': 0.9359406329849499, 'valid_acc': 0.7864685956768865, 'target_acc': 0.493241695303551}
+total cost time: 1937.1833
+manually descrease lr
+===========epoch 21===========
+{'class_loss': 0.43080222606658936}
+{'train_acc': 0.9446057078541048, 'valid_acc': 0.7900621484549449, 'target_acc': 0.49163802978235965}
+total cost time: 2223.0012
+===========epoch 24===========
+{'class_loss': 0.4608016312122345}
+{'train_acc': 0.9478168441993878, 'valid_acc': 0.7942187005217926, 'target_acc': 0.48957617411225657}
+total cost time: 2509.6837
+manually descrease lr
+===========epoch 27===========
+{'class_loss': 0.3179374933242798}
+{'train_acc': 0.952512119382432, 'valid_acc': 0.7966379138227593, 'target_acc': 0.4923253150057274}
+total cost time: 2793.3660
+===========epoch 29===========
+{'class_loss': 0.42266833782196045}
+{'train_acc': 0.9523403865986434, 'valid_acc': 0.795678876293895, 'target_acc': 0.49713631156930127}
+total cost time: 3050.8881
+valid acc: 0.7966
+DG result: 0.4923
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_230657-rwt00m2t
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run MMD-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/rwt00m2t
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:MMD
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:10.0
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 2.9365615844726562, 'mmd_loss': 0.38156425952911377, 'total_loss': 6.752204179763794}
+{'train_acc': 0.43064155923566266, 'valid_acc': 0.40455440149629746, 'target_acc': 0.2531500572737686}
+total cost time: 226.3381
+===========epoch 3===========
+{'class_loss': 1.212794542312622, 'mmd_loss': 0.38377296924591064, 'total_loss': 5.0505242347717285}
+{'train_acc': 0.7349856435968182, 'valid_acc': 0.6874055077843728, 'target_acc': 0.4279495990836197}
+total cost time: 502.8016
+===========epoch 6===========
+{'class_loss': 1.1501436233520508, 'mmd_loss': 0.3828060030937195, 'total_loss': 4.978203654289246}
+{'train_acc': 0.8074759498661397, 'valid_acc': 0.7311580608811327, 'target_acc': 0.4657502863688431}
+total cost time: 778.3369
+===========epoch 9===========
+{'class_loss': 0.7416993379592896, 'mmd_loss': 0.3832845091819763, 'total_loss': 4.574544429779053}
+{'train_acc': 0.8578871003561624, 'valid_acc': 0.7661032592225253, 'target_acc': 0.49140893470790376}
+total cost time: 1053.5912
+===========epoch 12===========
+{'class_loss': 0.6144141554832458, 'mmd_loss': 0.3829110562801361, 'total_loss': 4.443524718284607}
+{'train_acc': 0.8848896271193446, 'valid_acc': 0.7798457223788517, 'target_acc': 0.4868270332187858}
+total cost time: 1329.6907
+===========epoch 15===========
+{'class_loss': 0.4199919104576111, 'mmd_loss': 0.38294798135757446, 'total_loss': 4.249471724033356}
+{'train_acc': 0.9103283747882438, 'valid_acc': 0.7873627535112414, 'target_acc': 0.4882016036655212}
+total cost time: 1606.1600
+===========epoch 18===========
+{'class_loss': 0.28848788142204285, 'mmd_loss': 0.383225679397583, 'total_loss': 4.120744675397873}
+{'train_acc': 0.929973265791117, 'valid_acc': 0.7893113977041942, 'target_acc': 0.5026345933562428}
+total cost time: 1881.0583
+manually descrease lr
+===========epoch 21===========
+{'class_loss': 0.27705511450767517, 'mmd_loss': 0.38106685876846313, 'total_loss': 4.0877237021923065}
+{'train_acc': 0.9447902753207957, 'valid_acc': 0.7900690360765115, 'target_acc': 0.49873997709049256}
+total cost time: 2158.6047
+===========epoch 24===========
+{'class_loss': 0.30062466859817505, 'mmd_loss': 0.3829724192619324, 'total_loss': 4.130348861217499}
+{'train_acc': 0.9458289705491466, 'valid_acc': 0.7935880579866309, 'target_acc': 0.5017182130584192}
+total cost time: 2434.9849
+manually descrease lr
+===========epoch 27===========
+{'class_loss': 0.17940127849578857, 'mmd_loss': 0.382039874792099, 'total_loss': 3.9998000264167786}
+{'train_acc': 0.9501440216094673, 'valid_acc': 0.796484728017178, 'target_acc': 0.49942726231386025}
+total cost time: 2709.7760
+===========epoch 29===========
+{'class_loss': 0.28473585844039917, 'mmd_loss': 0.3814872205257416, 'total_loss': 4.099608063697815}
+{'train_acc': 0.9497529313029319, 'valid_acc': 0.7956250082906555, 'target_acc': 0.5046964490263459}
+total cost time: 2960.4772
+valid acc: 0.7965
+DG result: 0.4994
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_235813-4wsyy9kg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run CORAL-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/4wsyy9kg
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:CORAL
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1.0
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 2.915705680847168, 'coral_loss': 0.03191555291414261, 'total_loss': 2.9476212337613106}
+{'train_acc': 0.4320122564927052, 'valid_acc': 0.4035993604885892, 'target_acc': 0.2531500572737686}
+total cost time: 226.4912
+===========epoch 3===========
+{'class_loss': 1.2060000896453857, 'coral_loss': 0.03649808093905449, 'total_loss': 1.2424981705844402}
+{'train_acc': 0.7316355709348551, 'valid_acc': 0.6852692396780062, 'target_acc': 0.4284077892325315}
+total cost time: 502.8981
+===========epoch 6===========
+{'class_loss': 1.1429662704467773, 'coral_loss': 0.036208488047122955, 'total_loss': 1.1791747584939003}
+{'train_acc': 0.8063694683949243, 'valid_acc': 0.7341306222974588, 'target_acc': 0.4641466208476518}
+total cost time: 779.2426
+===========epoch 9===========
+{'class_loss': 0.7335085868835449, 'coral_loss': 0.03851823881268501, 'total_loss': 0.7720268256962299}
+{'train_acc': 0.8560083237864434, 'valid_acc': 0.762168769176924, 'target_acc': 0.4884306987399771}
+total cost time: 1052.3235
+===========epoch 12===========
+{'class_loss': 0.6097365617752075, 'coral_loss': 0.03728991001844406, 'total_loss': 0.6470264717936516}
+{'train_acc': 0.8821589071319854, 'valid_acc': 0.7777977603835572, 'target_acc': 0.4843069873997709}
+total cost time: 1328.6469
+===========epoch 15===========
+{'class_loss': 0.41900452971458435, 'coral_loss': 0.03620625659823418, 'total_loss': 0.4552107863128185}
+{'train_acc': 0.9081270751043986, 'valid_acc': 0.7856942909610255, 'target_acc': 0.4852233676975945}
+total cost time: 1604.3519
+===========epoch 18===========
+{'class_loss': 0.2911139130592346, 'coral_loss': 0.037569861859083176, 'total_loss': 0.3286837749183178}
+{'train_acc': 0.9278128703449283, 'valid_acc': 0.7881341671266918, 'target_acc': 0.5012600229095074}
+total cost time: 1880.2065
+manually descrease lr
+===========epoch 21===========
+{'class_loss': 0.27378880977630615, 'coral_loss': 0.03348299115896225, 'total_loss': 0.3072718009352684}
+{'train_acc': 0.9435205593111126, 'valid_acc': 0.787267559778603, 'target_acc': 0.4943871706758305}
+total cost time: 2156.4129
+===========epoch 24===========
+{'class_loss': 0.2895861864089966, 'coral_loss': 0.036204636096954346, 'total_loss': 0.3257908225059509}
+{'train_acc': 0.9432468565481053, 'valid_acc': 0.7920865564851294, 'target_acc': 0.500114547537228}
+total cost time: 2433.0257
+manually descrease lr
+===========epoch 27===========
+{'class_loss': 0.17541854083538055, 'coral_loss': 0.0356350913643837, 'total_loss': 0.21105363219976425}
+{'train_acc': 0.9488160063340997, 'valid_acc': 0.7956318959122223, 'target_acc': 0.5012600229095074}
+total cost time: 2707.8507
+===========epoch 29===========
+{'class_loss': 0.28139859437942505, 'coral_loss': 0.03409257531166077, 'total_loss': 0.3154911696910858}
+{'train_acc': 0.9504025136884664, 'valid_acc': 0.7959492792146547, 'target_acc': 0.5046964490263459}
+total cost time: 2958.4849
+valid acc: 0.7959
+DG result: 0.5047
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 950, in _bootstrap_inner
+    self.run()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 888, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 286, in check_stop_status
+    self._loop_check_status(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 224, in _loop_check_status
+    local_handle = request()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface.py", line 840, in deliver_stop_status
+    return self._deliver_stop_status(status)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 494, in _deliver_stop_status
+    return self._deliver_record(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 459, in _deliver_record
+    handle = mailbox._deliver_record(record, interface=self)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\mailbox.py", line 455, in _deliver_record
+    interface._publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_004903-yiipiwtl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ANDMask-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/yiipiwtl
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ANDMask
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:0.82
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'total_loss': 2.5376834869384766}
+{'train_acc': 0.4907019348632306, 'valid_acc': 0.462704974767496, 'target_acc': 0.2808705612829324}
+total cost time: 227.6440
+===========epoch 3===========
+{'total_loss': 1.1109178066253662}
+{'train_acc': 0.7583843898717065, 'valid_acc': 0.6930142425810112, 'target_acc': 0.4261168384879725}
+total cost time: 505.1201
+===========epoch 6===========
+{'total_loss': 1.0436490774154663}
+{'train_acc': 0.8393059918155871, 'valid_acc': 0.7469748035497271, 'target_acc': 0.4524627720504009}
+total cost time: 781.2579
+===========epoch 9===========
+{'total_loss': 0.7122930288314819}
+{'train_acc': 0.8831278476183811, 'valid_acc': 0.7625194851664441, 'target_acc': 0.46918671248568156}
+total cost time: 1057.3815
+===========epoch 12===========
+{'total_loss': 0.5323301553726196}
+{'train_acc': 0.9147104383024846, 'valid_acc': 0.7708356079490976, 'target_acc': 0.4616265750286369}
+total cost time: 1335.3667
+===========epoch 15===========
+{'total_loss': 0.31898367404937744}
+{'train_acc': 0.9326065761443827, 'valid_acc': 0.7770941175630268, 'target_acc': 0.46895761741122566}
+total cost time: 1612.1865
+===========epoch 18===========
+{'total_loss': 0.20189476013183594}
+{'train_acc': 0.9536715668872758, 'valid_acc': 0.7884986583593449, 'target_acc': 0.4760595647193585}
+total cost time: 1888.4745
+manually descrease lr
+===========epoch 21===========
+{'total_loss': 0.24945807456970215}
+{'train_acc': 0.9609343275192114, 'valid_acc': 0.7761764057635617, 'target_acc': 0.47079037800687284}
+total cost time: 2165.6033
+===========epoch 24===========
+{'total_loss': 0.22749225795269012}
+{'train_acc': 0.9656349359343112, 'valid_acc': 0.7793876955446782, 'target_acc': 0.47674684994272626}
+total cost time: 2442.9089
+manually descrease lr
+===========epoch 27===========
+{'total_loss': 0.12132841348648071}
+{'train_acc': 0.9715376738359301, 'valid_acc': 0.7871820172193941, 'target_acc': 0.4753722794959908}
+total cost time: 2718.3951
+===========epoch 29===========
+{'total_loss': 0.26770398020744324}
+{'train_acc': 0.9704958135943144, 'valid_acc': 0.7847145905674617, 'target_acc': 0.48087056128293243}
+total cost time: 2969.7921
+valid acc: 0.7885
+DG result: 0.4761
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_014008-zdgrixg4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run VREx-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/zdgrixg4
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:VREx
+alpha:1
+anneal_iters:100
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:10.0
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'loss_loss': 2.763590097427368, 'nll_loss': 2.7521591186523438, 'penalty_loss': 0.0030479368288069963}
+{'train_acc': 0.4680865899034299, 'valid_acc': 0.4319714294654831, 'target_acc': 0.2728522336769759}
+total cost time: 227.0007
+===========epoch 3===========
+{'loss_loss': 1.2925773859024048, 'nll_loss': 1.3153419494628906, 'penalty_loss': 0.00505876773968339}
+{'train_acc': 0.6858225538224524, 'valid_acc': 0.6410060672293088, 'target_acc': 0.384192439862543}
+total cost time: 503.2997
+===========epoch 6===========
+{'loss_loss': 1.2133692502975464, 'nll_loss': 1.1234267950057983, 'penalty_loss': 0.00455737067386508}
+{'train_acc': 0.7992365574439031, 'valid_acc': 0.7023621480808027, 'target_acc': 0.43963344788087055}
+total cost time: 778.3848
+===========epoch 9===========
+{'loss_loss': 0.7690251469612122, 'nll_loss': 0.8102732300758362, 'penalty_loss': 0.00756881944835186}
+{'train_acc': 0.8601595510158372, 'valid_acc': 0.746165933177486, 'target_acc': 0.46895761741122566}
+total cost time: 1053.6977
+===========epoch 12===========
+{'loss_loss': 0.5263349413871765, 'nll_loss': 0.4697697162628174, 'penalty_loss': 0.006768145132809877}
+{'train_acc': 0.8892400584301936, 'valid_acc': 0.7782531937305976, 'target_acc': 0.4664375715922108}
+total cost time: 1331.7627
+===========epoch 15===========
+{'loss_loss': 0.45122045278549194, 'nll_loss': 0.3596833348274231, 'penalty_loss': 0.01042227167636156}
+{'train_acc': 0.9278743265612631, 'valid_acc': 0.7812465455601711, 'target_acc': 0.47926689576174114}
+total cost time: 1607.8030
+===========epoch 18===========
+{'loss_loss': 0.2624650001525879, 'nll_loss': 0.31010672450065613, 'penalty_loss': 0.004070395603775978}
+{'train_acc': 0.9510439883034527, 'valid_acc': 0.7844992886192342, 'target_acc': 0.484077892325315}
+total cost time: 1882.6863
+manually descrease lr
+===========epoch 21===========
+{'loss_loss': 0.2069803774356842, 'nll_loss': 0.21490038931369781, 'penalty_loss': 7.620362885063514e-05}
+{'train_acc': 0.9637610779340324, 'valid_acc': 0.7908543524836423, 'target_acc': 0.4877434135166094}
+total cost time: 2158.4631
+===========epoch 24===========
+{'loss_loss': 0.22339209914207458, 'nll_loss': 0.24303162097930908, 'penalty_loss': 0.0009689500438980758}
+{'train_acc': 0.9656740543653347, 'valid_acc': 0.7994739557770479, 'target_acc': 0.4930126002290951}
+total cost time: 2434.6483
+manually descrease lr
+===========epoch 27===========
+{'loss_loss': 0.16230300068855286, 'nll_loss': 0.10658338665962219, 'penalty_loss': 0.0017086962470784783}
+{'train_acc': 0.9690124637687125, 'valid_acc': 0.7950785477968624, 'target_acc': 0.4927835051546392}
+total cost time: 2708.7238
+===========epoch 29===========
+{'loss_loss': 0.2192365527153015, 'nll_loss': 0.19089923799037933, 'penalty_loss': 0.0015862815780565143}
+{'train_acc': 0.9706906651129589, 'valid_acc': 0.8002315941493651, 'target_acc': 0.49713631156930127}
+total cost time: 2958.8164
+valid acc: 0.8002
+DG result: 0.4971
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 950, in _bootstrap_inner
+    self.run()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 888, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 286, in check_stop_status
+    self._loop_check_status(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 224, in _loop_check_status
+    local_handle = request()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface.py", line 840, in deliver_stop_status
+    return self._deliver_stop_status(status)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 494, in _deliver_stop_status
+    return self._deliver_record(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 459, in _deliver_record
+    handle = mailbox._deliver_record(record, interface=self)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\mailbox.py", line 455, in _deliver_record
+    interface._publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_023057-ov2td8lf
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run GroupDRO-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/ov2td8lf
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:GroupDRO
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:120
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'group_loss': 2.9096450805664062}
+{'train_acc': 0.433210830491187, 'valid_acc': 0.4058005082894652, 'target_acc': 0.2542955326460481}
+total cost time: 226.0739
+===========epoch 3===========
+{'group_loss': 1.2280263900756836}
+{'train_acc': 0.7322626328426204, 'valid_acc': 0.6839140363605195, 'target_acc': 0.4288659793814433}
+total cost time: 501.3427
+===========epoch 6===========
+{'group_loss': 1.1596827507019043}
+{'train_acc': 0.8054187289759582, 'valid_acc': 0.7332017712581762, 'target_acc': 0.465979381443299}
+total cost time: 776.1108
+===========epoch 9===========
+{'group_loss': 0.6998336315155029}
+{'train_acc': 0.8549963198082281, 'valid_acc': 0.7501183225359237, 'target_acc': 0.4888888888888889}
+total cost time: 1049.9979
+===========epoch 12===========
+{'group_loss': 0.6155646443367004}
+{'train_acc': 0.8851562359335198, 'valid_acc': 0.7713101735782674, 'target_acc': 0.48041237113402063}
+total cost time: 1325.8220
+===========epoch 15===========
+{'group_loss': 0.4077373445034027}
+{'train_acc': 0.9059435618253673, 'valid_acc': 0.7802679505873525, 'target_acc': 0.4879725085910653}
+total cost time: 1602.0081
+===========epoch 18===========
+{'group_loss': 0.29991912841796875}
+{'train_acc': 0.9244151738460203, 'valid_acc': 0.7872674322300554, 'target_acc': 0.502176403207331}
+total cost time: 1877.5186
+===========epoch 21===========
+{'group_loss': 0.25961655378341675}
+{'train_acc': 0.941140217049718, 'valid_acc': 0.7861483212740432, 'target_acc': 0.4943871706758305}
+total cost time: 2154.3621
+===========epoch 24===========
+{'group_loss': 0.2583490014076233}
+{'train_acc': 0.9490327890380544, 'valid_acc': 0.7873502112374012, 'target_acc': 0.4959908361970218}
+total cost time: 2430.9819
+===========epoch 27===========
+{'group_loss': 0.1497822105884552}
+{'train_acc': 0.9613819151595694, 'valid_acc': 0.7912805772132989, 'target_acc': 0.5010309278350515}
+total cost time: 2705.6741
+===========epoch 30===========
+{'group_loss': 0.2372954934835434}
+{'train_acc': 0.9716400101020782, 'valid_acc': 0.7965496077116873, 'target_acc': 0.5014891179839633}
+total cost time: 2983.4168
+===========epoch 33===========
+{'group_loss': 0.1485859751701355}
+{'train_acc': 0.9746732994819723, 'valid_acc': 0.7988294104502055, 'target_acc': 0.5010309278350515}
+total cost time: 3260.5386
+===========epoch 36===========
+{'group_loss': 0.1476329267024994}
+{'train_acc': 0.9782464759097919, 'valid_acc': 0.7936047243301746, 'target_acc': 0.5033218785796105}
+total cost time: 3535.3485
+===========epoch 39===========
+{'group_loss': 0.10166943073272705}
+{'train_acc': 0.9823838626971813, 'valid_acc': 0.8004634348925889, 'target_acc': 0.4852233676975945}
+total cost time: 3811.3989
+===========epoch 42===========
+{'group_loss': 0.1442648470401764}
+{'train_acc': 0.9859114079749899, 'valid_acc': 0.7949019355747184, 'target_acc': 0.4939289805269187}
+total cost time: 4085.3930
+===========epoch 45===========
+{'group_loss': 0.11533084511756897}
+{'train_acc': 0.9885059661841614, 'valid_acc': 0.7964366422147598, 'target_acc': 0.49736540664375717}
+total cost time: 4369.0178
+===========epoch 48===========
+{'group_loss': 0.09074339270591736}
+{'train_acc': 0.9901497760097385, 'valid_acc': 0.790926119799718, 'target_acc': 0.5008018327605956}
+total cost time: 4651.1376
+===========epoch 51===========
+{'group_loss': 0.07220736145973206}
+{'train_acc': 0.9895847766380096, 'valid_acc': 0.7945707770291528, 'target_acc': 0.49805269186712486}
+total cost time: 4927.4719
+===========epoch 54===========
+{'group_loss': 0.10430841147899628}
+{'train_acc': 0.9929708188429601, 'valid_acc': 0.7954070703391124, 'target_acc': 0.5012600229095074}
+total cost time: 5203.1710
+===========epoch 57===========
+{'group_loss': 0.07729829847812653}
+{'train_acc': 0.9925317052600796, 'valid_acc': 0.7974135790564604, 'target_acc': 0.5083619702176403}
+total cost time: 5478.6590
+===========epoch 60===========
+{'group_loss': 0.03865623474121094}
+{'train_acc': 0.9934014341805201, 'valid_acc': 0.7971500637572673, 'target_acc': 0.5095074455899198}
+total cost time: 5752.1043
+===========epoch 63===========
+{'group_loss': 0.062255628407001495}
+{'train_acc': 0.9944073248791483, 'valid_acc': 0.7980028958622231, 'target_acc': 0.49805269186712486}
+total cost time: 6027.9098
+===========epoch 66===========
+{'group_loss': 0.041227493435144424}
+{'train_acc': 0.9947013879637482, 'valid_acc': 0.7920384706827113, 'target_acc': 0.5008018327605956}
+total cost time: 6304.0727
+===========epoch 69===========
+{'group_loss': 0.04064933955669403}
+{'train_acc': 0.9938369922753635, 'valid_acc': 0.7965428476386682, 'target_acc': 0.5003436426116838}
+total cost time: 6578.7232
+===========epoch 72===========
+{'group_loss': 0.030338216572999954}
+{'train_acc': 0.9937221714880132, 'valid_acc': 0.7946287691020957, 'target_acc': 0.5005727376861397}
+total cost time: 6853.6796
+===========epoch 75===========
+{'group_loss': 0.05487202852964401}
+{'train_acc': 0.9942569330861973, 'valid_acc': 0.7925670318636678, 'target_acc': 0.4959908361970218}
+total cost time: 7129.6769
+===========epoch 78===========
+{'group_loss': 0.03910886496305466}
+{'train_acc': 0.9953549163120922, 'valid_acc': 0.7959454102420463, 'target_acc': 0.49736540664375717}
+total cost time: 7404.9045
+===========epoch 81===========
+{'group_loss': 0.03330199792981148}
+{'train_acc': 0.995241482793988, 'valid_acc': 0.7923931831933871, 'target_acc': 0.4950744558991982}
+total cost time: 7680.0050
+manually descrease lr
+===========epoch 84===========
+{'group_loss': 0.041953347623348236}
+{'train_acc': 0.9956187416231469, 'valid_acc': 0.7940105412922267, 'target_acc': 0.50446735395189}
+total cost time: 7955.2662
+===========epoch 87===========
+{'group_loss': 0.03506968170404434}
+{'train_acc': 0.9961041007383541, 'valid_acc': 0.7972011682086436, 'target_acc': 0.50446735395189}
+total cost time: 8230.0278
+===========epoch 90===========
+{'group_loss': 0.03724652901291847}
+{'train_acc': 0.995524871351862, 'valid_acc': 0.7915126730536177, 'target_acc': 0.5079037800687285}
+total cost time: 8505.7151
+===========epoch 93===========
+{'group_loss': 0.040231846272945404}
+{'train_acc': 0.9961112117144286, 'valid_acc': 0.7931370463225713, 'target_acc': 0.5008018327605956}
+total cost time: 8779.6684
+===========epoch 96===========
+{'group_loss': 0.013522401452064514}
+{'train_acc': 0.9949883320096592, 'valid_acc': 0.7947681796645439, 'target_acc': 0.500114547537228}
+total cost time: 9055.5435
+===========epoch 99===========
+{'group_loss': 0.050189122557640076}
+{'train_acc': 0.9958029266776801, 'valid_acc': 0.7940036536706602, 'target_acc': 0.5040091638029782}
+total cost time: 9329.8385
+===========epoch 102===========
+{'group_loss': 0.02578296698629856}
+{'train_acc': 0.9964315585471493, 'valid_acc': 0.7914988978104848, 'target_acc': 0.50446735395189}
+total cost time: 9605.7812
+===========epoch 105===========
+{'group_loss': 0.05922876298427582}
+{'train_acc': 0.9953175675624729, 'valid_acc': 0.7954540507207853, 'target_acc': 0.49782359679266897}
+total cost time: 9879.9933
+manually descrease lr
+===========epoch 108===========
+{'group_loss': 0.04836452379822731}
+{'train_acc': 0.9955391013666252, 'valid_acc': 0.7937000456113606, 'target_acc': 0.5042382588774341}
+total cost time: 10154.8684
+===========epoch 111===========
+{'group_loss': 0.04812852293252945}
+{'train_acc': 0.9965574443359979, 'valid_acc': 0.7970273195383627, 'target_acc': 0.5046964490263459}
+total cost time: 10429.9073
+===========epoch 114===========
+{'group_loss': 0.028504274785518646}
+{'train_acc': 0.9961463922452568, 'valid_acc': 0.7958500889608603, 'target_acc': 0.49896907216494846}
+total cost time: 10704.4819
+===========epoch 117===========
+{'group_loss': 0.05080149322748184}
+{'train_acc': 0.9956930486476132, 'valid_acc': 0.7986446776372023, 'target_acc': 0.5081328751431844}
+total cost time: 10979.1608
+===========epoch 119===========
+{'group_loss': 0.05179930478334427}
+{'train_acc': 0.9953460275919991, 'valid_acc': 0.7927754461903289, 'target_acc': 0.5074455899198167}
+total cost time: 11228.1199
+valid acc: 0.8005
+DG result: 0.4852
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_074613-v1c8dnkc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/v1c8dnkc
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:120
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 2.7450997829437256}
+{'train_acc': 0.4666441523780989, 'valid_acc': 0.43188312335441115, 'target_acc': 0.27399770904925547}
+total cost time: 242.8428
+===========epoch 3===========
+{'class_loss': 1.0848113298416138}
+{'train_acc': 0.7503601752352224, 'valid_acc': 0.7008512505029664, 'target_acc': 0.4329896907216495}
+total cost time: 523.4744
+===========epoch 6===========
+{'class_loss': 1.0352635383605957}
+{'train_acc': 0.8245433033383257, 'valid_acc': 0.7430443100252818, 'target_acc': 0.4561282932416953}
+total cost time: 806.4151
+===========epoch 9===========
+{'class_loss': 0.6191627383232117}
+{'train_acc': 0.8656383931791843, 'valid_acc': 0.7712425303318948, 'target_acc': 0.4849942726231386}
+total cost time: 1089.9388
+===========epoch 12===========
+{'class_loss': 0.5040283799171448}
+{'train_acc': 0.8978093097521876, 'valid_acc': 0.7837829759763161, 'target_acc': 0.4756013745704467}
+total cost time: 1370.7376
+===========epoch 15===========
+{'class_loss': 0.32325270771980286}
+{'train_acc': 0.9215666830009613, 'valid_acc': 0.7840010414764067, 'target_acc': 0.4870561282932417}
+total cost time: 1655.7623
+===========epoch 18===========
+{'class_loss': 0.2270984649658203}
+{'train_acc': 0.9435753192139886, 'valid_acc': 0.7933990735553765, 'target_acc': 0.4930126002290951}
+total cost time: 1945.9092
+===========epoch 21===========
+{'class_loss': 0.20238329470157623}
+{'train_acc': 0.9527716001932904, 'valid_acc': 0.7940241889868123, 'target_acc': 0.4882016036655212}
+total cost time: 2236.6533
+===========epoch 24===========
+{'class_loss': 0.2087055891752243}
+{'train_acc': 0.9637326340297349, 'valid_acc': 0.8041356426082894, 'target_acc': 0.48980526918671247}
+total cost time: 2531.6846
+===========epoch 27===========
+{'class_loss': 0.10765182226896286}
+{'train_acc': 0.9729350453158662, 'valid_acc': 0.8001087223819131, 'target_acc': 0.4847651775486827}
+total cost time: 2834.7362
+===========epoch 30===========
+{'class_loss': 0.21322183310985565}
+{'train_acc': 0.9796683775816732, 'valid_acc': 0.8006069695247405, 'target_acc': 0.486368843069874}
+total cost time: 3120.6113
+===========epoch 33===========
+{'class_loss': 0.10683047026395798}
+{'train_acc': 0.9829071930069376, 'valid_acc': 0.8023678622557319, 'target_acc': 0.4831615120274914}
+total cost time: 3398.7931
+===========epoch 36===========
+{'class_loss': 0.10949686914682388}
+{'train_acc': 0.9868056509621469, 'valid_acc': 0.7966960334442496, 'target_acc': 0.48934707903780067}
+total cost time: 3678.0339
+===========epoch 39===========
+{'class_loss': 0.07032334059476852}
+{'train_acc': 0.9885326565322833, 'valid_acc': 0.7989247317313916, 'target_acc': 0.4813287514318442}
+total cost time: 3954.0235
+===========epoch 42===========
+{'class_loss': 0.09372523427009583}
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_085754-8hdcjgpy
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run MMD-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/8hdcjgpy
+{'train_acc': 0.9882791152731819, 'valid_acc': 0.8004028068163304, 'target_acc': 0.4852233676975945}
+total cost time: 4247.0074
+===========epoch 45===========
+{'class_loss': 0.09332486242055893}
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:MMD
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+{'train_acc': 0.991490251618465, 'valid_acc': 0.8015385841158862, 'target_acc': 0.4829324169530355}
+total cost time: 4540.3239
+===========epoch 48===========
+{'class_loss': 0.05257199704647064}
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 120, in <module>
+    sch = get_scheduler(opt, args)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\MMD.py", line 38, in update
+    clf_loss = 0
+KeyboardInterrupt
+{'train_acc': 0.9934472892380742, 'valid_acc': 0.7988737548285628, 'target_acc': 0.48980526918671247}
+total cost time: 4824.1779
+===========epoch 51===========
+{'class_loss': 0.054814424365758896}
+{'train_acc': 0.9929957233844493, 'valid_acc': 0.7982899651265264, 'target_acc': 0.4879725085910653}
+total cost time: 5107.5382
+===========epoch 54===========
+{'class_loss': 0.0562155582010746}
+{'train_acc': 0.9952855601075238, 'valid_acc': 0.7985770343908299, 'target_acc': 0.49140893470790376}
+total cost time: 5395.2319
+===========epoch 57===========
+{'class_loss': 0.05914883315563202}
+{'train_acc': 0.9949083012783649, 'valid_acc': 0.8013991735534379, 'target_acc': 0.49163802978235965}
+total cost time: 5671.4373
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+===========epoch 60===========
+{'class_loss': 0.03522006422281265}
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_092310-44wtd5sn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ANDMask-0.001-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/44wtd5sn
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ANDMask
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.001
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:30
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+{'train_acc': 0.9942071401284479, 'valid_acc': 0.8053405512206057, 'target_acc': 0.49049255441008016}
+total cost time: 5955.6728
+===========epoch 63===========
+{'class_loss': 0.03741025552153587}
+{'train_acc': 0.9958896859728906, 'valid_acc': 0.800027431440955, 'target_acc': 0.49117983963344786}
+total cost time: 6238.6812
+===========epoch 66===========
+{'class_loss': 0.03395882621407509}
+{'train_acc': 0.9949972287923666, 'valid_acc': 0.79939266483609, 'target_acc': 0.493241695303551}
+total cost time: 6520.7770
+===========epoch 69===========
+{'class_loss': 0.026557007804512978}
+{'train_acc': 0.9945065364451037, 'valid_acc': 0.7987647858527912, 'target_acc': 0.4856815578465063}
+total cost time: 6806.9806
+===========epoch 72===========
+{'class_loss': 0.022859327495098114}
+{'train_acc': 0.9953954300749762, 'valid_acc': 0.7946867611750384, 'target_acc': 0.4849942726231386}
+total cost time: 7091.4341
+===========epoch 75===========
+{'class_loss': 0.03994890674948692}
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 121, in <module>
+    step_vals = algorithm.update(minibatches_device, opt, sch)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\ANDMask.py", line 37, in update
+    self.mask_grads(self.tau, param_gradients, self.network.parameters())
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\ANDMask.py", line 51, in mask_grads
+    mask = mask.to(torch.float32)  # BCHW
+KeyboardInterrupt
+{'train_acc': 0.9955177603757877, 'valid_acc': 0.8020409553284171, 'target_acc': 0.4843069873997709}
+total cost time: 7374.2114
+===========epoch 78===========
+{'class_loss': 0.022647380828857422}
+{'train_acc': 0.9961463922452568, 'valid_acc': 0.7996010791627509, 'target_acc': 0.49003436426116836}
+total cost time: 7667.3249
+===========epoch 81===========
+{'class_loss': 0.027684280648827553}
+{'train_acc': 0.9955974006323095, 'valid_acc': 0.8017235720259844, 'target_acc': 0.4872852233676976}
+total cost time: 7959.2653
+manually descrease lr
+===========epoch 84===========
+{'class_loss': 0.0362495593726635}
+{'train_acc': 0.9964440108178939, 'valid_acc': 0.8021223738179226, 'target_acc': 0.4941580756013746}
+total cost time: 8239.2344
+===========epoch 87===========
+{'class_loss': 0.026327045634388924}
+{'train_acc': 0.9964440108178939, 'valid_acc': 0.8016586923314751, 'target_acc': 0.49049255441008016}
+total cost time: 8513.4402
+===========epoch 90===========
+{'class_loss': 0.032496966421604156}
+{'train_acc': 0.9962544925313052, 'valid_acc': 0.7980858024181163, 'target_acc': 0.4927835051546392}
+total cost time: 8800.6203
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 116, in <module>
+    for iter_num in range(args.steps_per_epoch):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\mydataloader.py", line 46, in __iter__
+    yield next(self._infinite_iterator)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 335, in _poll
+    return bool(wait([self], timeout))
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 884, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 816, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+KeyboardInterrupt
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_101617-h0ovgyxb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/h0ovgyxb
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_101634-mgqyp2zc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run CORAL-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/mgqyp2zc
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.0005
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:60
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:CORAL
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.0005
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:60
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1.0
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.5082788467407227}
+===========epoch 0===========
+{'class_loss': 3.605515241622925, 'coral_loss': 0.02955521270632744, 'total_loss': 3.6350704543292522}
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_102254-mctk1m1i
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/mctk1m1i
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.0005
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:60
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.5082788467407227}
+{'train_acc': 0.2620045493390322, 'valid_acc': 0.2562479656006669, 'target_acc': 0.15349369988545247}
+total cost time: 234.2950
+===========epoch 3===========
+{'class_loss': 1.6726675033569336}
+{'train_acc': 0.6532057682087681, 'valid_acc': 0.615442617268985, 'target_acc': 0.38785796105383735}
+total cost time: 511.4863
+===========epoch 6===========
+{'class_loss': 1.4339275360107422}
+{'train_acc': 0.7370778462001416, 'valid_acc': 0.6887429393375707, 'target_acc': 0.4334478808705613}
+total cost time: 798.8043
+===========epoch 9===========
+{'class_loss': 1.0656965970993042}
+{'train_acc': 0.7869692541189025, 'valid_acc': 0.7208147665164315, 'target_acc': 0.4536082474226804}
+total cost time: 1078.7201
+===========epoch 12===========
+{'class_loss': 0.8556666970252991}
+{'train_acc': 0.8197122810397093, 'valid_acc': 0.7445182610405171, 'target_acc': 0.454524627720504}
+total cost time: 1352.9997
+===========epoch 15===========
+{'class_loss': 0.6474729776382446}
+{'train_acc': 0.8451885691153137, 'valid_acc': 0.7622296523502775, 'target_acc': 0.47170675830469644}
+total cost time: 1631.0799
+===========epoch 18===========
+{'class_loss': 0.49735042452812195}
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_110432-diuhbo9o
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/diuhbo9o
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:ERM
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.0005
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:60
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.5082788467407227}
+{'train_acc': 0.2620045493390322, 'valid_acc': 0.2562479656006669, 'target_acc': 0.15349369988545247}
+total cost time: 261.8975
+===========epoch 3===========
+{'class_loss': 1.6726675033569336}
+{'train_acc': 0.6532057682087681, 'valid_acc': 0.615442617268985, 'target_acc': 0.38785796105383735}
+total cost time: 555.8867
+===========epoch 6===========
+{'class_loss': 1.4339275360107422}
+{'train_acc': 0.7370778462001416, 'valid_acc': 0.6887429393375707, 'target_acc': 0.4334478808705613}
+total cost time: 825.1784
+===========epoch 9===========
+{'class_loss': 1.0656965970993042}
+{'train_acc': 0.7869692541189025, 'valid_acc': 0.7208147665164315, 'target_acc': 0.4536082474226804}
+total cost time: 1094.0958
+===========epoch 12===========
+{'class_loss': 0.8556666970252991}
+{'train_acc': 0.8197122810397093, 'valid_acc': 0.7445182610405171, 'target_acc': 0.454524627720504}
+total cost time: 1363.0157
+===========epoch 15===========
+{'class_loss': 0.6474729776382446}
+{'train_acc': 0.8451885691153137, 'valid_acc': 0.7622296523502775, 'target_acc': 0.47170675830469644}
+total cost time: 1632.3440
+===========epoch 18===========
+{'class_loss': 0.49735042452812195}
+{'train_acc': 0.868189272612207, 'valid_acc': 0.7648917180857376, 'target_acc': 0.4815578465063001}
+total cost time: 1901.6640
+===========epoch 21===========
+{'class_loss': 0.4699206054210663}
+{'train_acc': 0.8816565434635226, 'valid_acc': 0.7740510217999175, 'target_acc': 0.4760595647193585}
+total cost time: 2170.6519
+===========epoch 24===========
+{'class_loss': 0.48673081398010254}
+{'train_acc': 0.8972187995192682, 'valid_acc': 0.7802307489276569, 'target_acc': 0.4865979381443299}
+total cost time: 2439.5545
+===========epoch 27===========
+{'class_loss': 0.30607327818870544}
+{'train_acc': 0.9130154321246828, 'valid_acc': 0.7842065647026571, 'target_acc': 0.4861397479954181}
+total cost time: 2707.1848
+===========epoch 30===========
+{'class_loss': 0.4473443925380707}
+{'train_acc': 0.9262846783814749, 'valid_acc': 0.7898026296769077, 'target_acc': 0.4822451317296678}
+total cost time: 2978.8278
+===========epoch 33===========
+{'class_loss': 0.33239224553108215}
+{'train_acc': 0.9357066549726674, 'valid_acc': 0.7948976839564675, 'target_acc': 0.48911798396334477}
+total cost time: 3247.3304
+===========epoch 36===========
+{'class_loss': 0.3344951570034027}
+{'train_acc': 0.9456546790717949, 'valid_acc': 0.7940448518515119, 'target_acc': 0.49163802978235965}
+total cost time: 3518.4580
+===========epoch 39===========
+{'class_loss': 0.1902802437543869}
+{'train_acc': 0.9517807365841989, 'valid_acc': 0.7939219800840597, 'target_acc': 0.4833906071019473}
+total cost time: 3787.1778
+manually descrease lr
+===========epoch 42===========
+{'class_loss': 0.3122744858264923}
+{'train_acc': 0.9591486402712325, 'valid_acc': 0.7943415722892446, 'target_acc': 0.4849942726231386}
+total cost time: 4054.5653
+===========epoch 45===========
+{'class_loss': 0.28830334544181824}
+{'train_acc': 0.9608635759827823, 'valid_acc': 0.7961093526418025, 'target_acc': 0.4872852233676976}
+total cost time: 4321.6404
+===========epoch 48===========
+{'class_loss': 0.2540150284767151}
+{'train_acc': 0.9617347002350835, 'valid_acc': 0.7915263207482033, 'target_acc': 0.4877434135166094}
+total cost time: 4590.4805
+===========epoch 51===========
+{'class_loss': 0.2269604206085205}
+{'train_acc': 0.9608845345614618, 'valid_acc': 0.794703172421487, 'target_acc': 0.4833906071019473}
+total cost time: 4861.0043
+manually descrease lr
+===========epoch 54===========
+{'class_loss': 0.23478484153747559}
+{'train_acc': 0.9626030338236634, 'valid_acc': 0.7896329050763301, 'target_acc': 0.49026345933562426}
+total cost time: 5129.0186
+===========epoch 57===========
+{'class_loss': 0.20556344091892242}
+{'train_acc': 0.9624376391290189, 'valid_acc': 0.7900110440035687, 'target_acc': 0.48911798396334477}
+total cost time: 5396.7616
+===========epoch 59===========
+{'class_loss': 0.21322719752788544}
+{'train_acc': 0.9610193090704034, 'valid_acc': 0.7919016961235785, 'target_acc': 0.4868270332187858}
+total cost time: 5640.6749
+valid acc: 0.7961
+DG result: 0.4873
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_124005-1e70xrbg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run DANN-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/1e70xrbg
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:DANN
+alpha:0.1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.0005
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:60
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.438297986984253, 'dis_loss': 0.9169283509254456, 'total_loss': 4.355226516723633}
+{'train_acc': 0.25831596192938994, 'valid_acc': 0.2618206041583548, 'target_acc': 0.15670103092783505}
+total cost time: 218.0461
+===========epoch 3===========
+{'class_loss': 1.8597713708877563, 'dis_loss': 0.8207659125328064, 'total_loss': 2.680537223815918}
+{'train_acc': 0.6479806983726664, 'valid_acc': 0.6177251835593663, 'target_acc': 0.39037800687285223}
+total cost time: 485.7480
+===========epoch 6===========
+{'class_loss': 1.071711778640747, 'dis_loss': 0.6442785263061523, 'total_loss': 1.7159903049468994}
+{'train_acc': 0.7437353256676215, 'valid_acc': 0.6985810989378778, 'target_acc': 0.43848797250859106}
+total cost time: 755.0398
+===========epoch 9===========
+{'class_loss': 1.0680197477340698, 'dis_loss': 0.7208313941955566, 'total_loss': 1.7888511419296265}
+{'train_acc': 0.7836217562757315, 'valid_acc': 0.7277522595650358, 'target_acc': 0.4547537227949599}
+total cost time: 1025.0898
+===========epoch 12===========
+{'class_loss': 0.876193106174469, 'dis_loss': 0.5714345574378967, 'total_loss': 1.4476276636123657}
+{'train_acc': 0.816432553314174, 'valid_acc': 0.7462791537715084, 'target_acc': 0.4586483390607102}
+total cost time: 1294.2936
+===========epoch 15===========
+{'class_loss': 0.8175999522209167, 'dis_loss': 0.6052135825157166, 'total_loss': 1.4228135347366333}
+{'train_acc': 0.8437560171045494, 'valid_acc': 0.7628229656771962, 'target_acc': 0.46827033218785796}
+total cost time: 1562.6078
+===========epoch 18===========
+{'class_loss': 0.5640420317649841, 'dis_loss': 0.6001352667808533, 'total_loss': 1.1641772985458374}
+{'train_acc': 0.8682074566523942, 'valid_acc': 0.7708189416055541, 'target_acc': 0.48087056128293243}
+total cost time: 1830.1267
+===========epoch 21===========
+{'class_loss': 0.48804476857185364, 'dis_loss': 0.6338285803794861, 'total_loss': 1.121873378753662}
+{'train_acc': 0.8842752172020241, 'valid_acc': 0.779848485930715, 'target_acc': 0.4849942726231386}
+total cost time: 2096.7008
+===========epoch 24===========
+{'class_loss': 0.4492168128490448, 'dis_loss': 0.4858117997646332, 'total_loss': 0.935028612613678}
+{'train_acc': 0.8965986658951195, 'valid_acc': 0.7806336747892982, 'target_acc': 0.486368843069874}
+total cost time: 2365.0731
+===========epoch 27===========
+{'class_loss': 0.5975475311279297, 'dis_loss': 0.4942450225353241, 'total_loss': 1.0917925834655762}
+{'train_acc': 0.9117239765867754, 'valid_acc': 0.7870011533789992, 'target_acc': 0.4849942726231386}
+total cost time: 2635.1042
+===========epoch 30===========
+{'class_loss': 0.2769276201725006, 'dis_loss': 0.5272673964500427, 'total_loss': 0.8041950464248657}
+{'train_acc': 0.9283188056266569, 'valid_acc': 0.7899599395521925, 'target_acc': 0.47949599083619704}
+total cost time: 2901.5976
+===========epoch 33===========
+{'class_loss': 0.30056172609329224, 'dis_loss': 0.564741313457489, 'total_loss': 0.8653030395507812}
+{'train_acc': 0.9359103952114051, 'valid_acc': 0.7939082048409265, 'target_acc': 0.488659793814433}
+total cost time: 3170.2106
+===========epoch 36===========
+{'class_loss': 0.329455703496933, 'dis_loss': 0.5240197777748108, 'total_loss': 0.8534754514694214}
+{'train_acc': 0.9437300474445215, 'valid_acc': 0.7890518789261569, 'target_acc': 0.4822451317296678}
+total cost time: 3435.3611
+===========epoch 39===========
+{'class_loss': 0.27034565806388855, 'dis_loss': 0.4755423963069916, 'total_loss': 0.7458880543708801}
+{'train_acc': 0.9505066760743194, 'valid_acc': 0.7910516275704859, 'target_acc': 0.48980526918671247}
+total cost time: 3705.5442
+manually descrease lr
+===========epoch 42===========
+{'class_loss': 0.2507759928703308, 'dis_loss': 0.4672871530056, 'total_loss': 0.7180631160736084}
+{'train_acc': 0.9581239592127159, 'valid_acc': 0.7912020498242041, 'target_acc': 0.48064146620847653}
+total cost time: 3974.1733
+===========epoch 45===========
+{'class_loss': 0.2100992202758789, 'dis_loss': 0.44411909580230713, 'total_loss': 0.654218316078186}
+{'train_acc': 0.959875080312182, 'valid_acc': 0.7936930304412465, 'target_acc': 0.488659793814433}
+total cost time: 4244.2305
+===========epoch 48===========
+{'class_loss': 0.21602235734462738, 'dis_loss': 0.4376511871814728, 'total_loss': 0.653673529624939}
+{'train_acc': 0.959120961191251, 'valid_acc': 0.7933825347603806, 'target_acc': 0.4930126002290951}
+total cost time: 4514.2149
+===========epoch 51===========
+{'class_loss': 0.2606228291988373, 'dis_loss': 0.4497109353542328, 'total_loss': 0.7103337645530701}
+{'train_acc': 0.96118432135289, 'valid_acc': 0.7896729978364365, 'target_acc': 0.4879725085910653}
+total cost time: 4782.3462
+manually descrease lr
+===========epoch 54===========
+{'class_loss': 0.3777749836444855, 'dis_loss': 0.47190701961517334, 'total_loss': 0.8496819734573364}
+{'train_acc': 0.961616706371854, 'valid_acc': 0.7894136066069467, 'target_acc': 0.49163802978235965}
+total cost time: 5050.9713
+===========epoch 57===========
+{'class_loss': 0.32795247435569763, 'dis_loss': 0.43655872344970703, 'total_loss': 0.764511227607727}
+{'train_acc': 0.9610356992413432, 'valid_acc': 0.7916354172725222, 'target_acc': 0.4872852233676976}
+total cost time: 5316.9375
+===========epoch 59===========
+{'class_loss': 0.2643095850944519, 'dis_loss': 0.43675103783607483, 'total_loss': 0.7010606527328491}
+{'train_acc': 0.9618378497012339, 'valid_acc': 0.79770617542449, 'target_acc': 0.49003436426116836}
+total cost time: 5558.6153
+valid acc: 0.7977
+DG result: 0.4900
+Environment:
+	Python: 3.9.0
+	PyTorch: 2.2.2+cu121
+	Torchvision: 0.17.2+cu121
+	CUDA: 12.1
+	CUDNN: 8801
+	NumPy: 1.24.1
+	PIL: 10.2.0
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_141408-1kz4lycl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Mixup-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/1kz4lycl
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+=======hyper-parameter used========
+==========================================
+algorithm:Mixup
+alpha:1
+anneal_iters:500
+batch_size:32
+beta:1
+beta1:0.5
+bottleneck:256
+checkpoint_freq:3
+classifier:linear
+data_file:
+dataset:office-home
+data_dir:D:\ML\Dataset\OfficeHome\
+dis_hidden:256
+disttype:2-norm
+gpu_id:0
+groupdro_eta:0.0031622776601683794
+inner_lr:0.01
+lam:1
+layer:bn
+lr:0.0005
+lr_decay:0.75
+lr_decay1:1.0
+lr_decay2:1.0
+lr_gamma:0.0003
+max_epoch:60
+mixupalpha:0.2
+mldg_beta:1
+mmd_gamma:1
+momentum:0.9
+net:resnet18
+N_WORKERS:4
+rsc_f_drop_factor:0.3333333333333333
+rsc_b_drop_factor:0.3333333333333333
+save_model_every_checkpoint:False
+schuse:False
+schusech:cos
+seed:0
+split_style:strat
+task:img_dg
+tau:1
+test_envs:[1]
+output:train_output
+weight_decay:0.0005
+steps_per_epoch:100
+domains:['Art', 'Clipart', 'Product', 'RealWorld']
+img_dataset:{'office': ['amazon', 'dslr', 'webcam'], 'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'], 'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'], 'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'], 'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'], 'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']}
+input_shape:(3, 224, 224)
+num_classes:65
+domain_num:4
+
+===========start training===========
+===========epoch 0===========
+{'class_loss': 3.8267083168029785}
+{'train_acc': 0.18402017499914036, 'valid_acc': 0.18190705996516396, 'target_acc': 0.1108820160366552}
+total cost time: 235.7353
+===========epoch 3===========
+{'class_loss': 2.290275812149048}
+{'train_acc': 0.5927555229766819, 'valid_acc': 0.5611674365496996, 'target_acc': 0.3534936998854525}
+total cost time: 552.9311
+===========epoch 6===========
+{'class_loss': 2.2951016426086426}
+{'train_acc': 0.6874408258929553, 'valid_acc': 0.6485825785010291, 'target_acc': 0.41764032073310425}
+total cost time: 868.5107
+===========epoch 9===========
+{'class_loss': 2.0435054302215576}
+{'train_acc': 0.7466767141773349, 'valid_acc': 0.7002191199014168, 'target_acc': 0.43963344788087055}
+total cost time: 1182.5959
+===========epoch 12===========
+{'class_loss': 1.1913094520568848}
+{'train_acc': 0.7813993233833633, 'valid_acc': 0.721132149818864, 'target_acc': 0.44054982817869415}
+total cost time: 1496.8079
+===========epoch 15===========
+{'class_loss': 1.0203583240509033}
+{'train_acc': 0.8075473238474986, 'valid_acc': 0.7378429227732659, 'target_acc': 0.4579610538373425}
+total cost time: 1817.0961
+===========epoch 18===========
+{'class_loss': 1.3481464385986328}
+{'train_acc': 0.827728754192575, 'valid_acc': 0.7524698925905179, 'target_acc': 0.4739977090492554}
+total cost time: 2142.5437
+===========epoch 21===========
+{'class_loss': 1.2300114631652832}

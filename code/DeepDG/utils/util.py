@@ -100,7 +100,7 @@ def img_param_init(args):
     elif dataset == 'office-caltech':
         domains = ['amazon', 'dslr', 'webcam', 'caltech']
     elif dataset == 'office-home':
-        domains = ['Art', 'Clipart', 'Product', 'Real_World']
+        domains = ['Art', 'Clipart', 'Product', 'RealWorld']
     elif dataset == 'dg5':
         domains = ['mnist', 'mnist_m', 'svhn', 'syn', 'usps']
     elif dataset == 'PACS':
@@ -113,7 +113,7 @@ def img_param_init(args):
     args.img_dataset = {
         'office': ['amazon', 'dslr', 'webcam'],
         'office-caltech': ['amazon', 'dslr', 'webcam', 'caltech'],
-        'office-home': ['Art', 'Clipart', 'Product', 'Real_World'],
+        'office-home': ['Art', 'Clipart', 'Product', 'RealWorld'],
         'PACS': ['art_painting', 'cartoon', 'photo', 'sketch'],
         'dg5': ['mnist', 'mnist_m', 'svhn', 'syn', 'usps'],
         'VLCS': ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']

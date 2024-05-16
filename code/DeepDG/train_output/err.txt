@@ -296,3 +296,447 @@ C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torchvision\models\_utils.
   warnings.warn(
 C:\ProgramData\Anaconda3\envs\mmlab\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
   warnings.warn(msg)
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\pydevd.py", line 1534, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 77, in <module>
+    train_loaders, eval_loaders = get_img_dataloader(args)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\getdataloader.py", line 22, in get_img_dataloader
+    tmpdatay = ImageDataset(args.dataset, args.task, args.data_dir,
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\imgdata\imgdataload.py", line 12, in __init__
+    self.imgs = ImageFolder(root_dir+domain_name).imgs
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 309, in __init__
+    super().__init__(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 218, in find_classes
+    return find_classes(directory)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\ML\\Dataset\\OfficeHome\\Real_World'
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\pydevd.py", line 1534, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "C:\Program Files\JetBrains\PyCharm 2023.3.2\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 77, in <module>
+    train_loaders, eval_loaders = get_img_dataloader(args)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\getdataloader.py", line 22, in get_img_dataloader
+    tmpdatay = ImageDataset(args.dataset, args.task, args.data_dir,
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\imgdata\imgdataload.py", line 12, in __init__
+    self.imgs = ImageFolder(root_dir+domain_name).imgs
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 309, in __init__
+    super().__init__(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 218, in find_classes
+    return find_classes(directory)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\datasets\folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'D:\\ML\\Dataset\\OfficeHome\\Real_World'
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 111, in <module>
+    print('===========start training===========')
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\ERM.py", line 26, in update
+    all_y = torch.cat([data[1].cuda().long() for data in minibatches])
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 76, in <module>
+    wandb.init(
+KeyboardInterrupt
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_165323-zq3z8w3i
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/zq3z8w3i
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 136, in <module>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 136, in <listcomp>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\modelopera.py", line 22, in accuracy
+    for data in loader:
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 335, in _poll
+    return bool(wait([self], timeout))
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 884, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 816, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+KeyboardInterrupt
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_172323-b5xnpia6
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/b5xnpia6
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_173141-i0ibl8k4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/i0ibl8k4
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_175132-pf6j5q3o
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/pf6j5q3o
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 138, in <module>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 138, in <listcomp>
+    acc_record[item] = np.mean(np.array([modelopera.accuracy(
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\modelopera.py", line 22, in accuracy
+    for data in loader:
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 335, in _poll
+    return bool(wait([self], timeout))
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 884, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 816, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+KeyboardInterrupt
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_192204-kcsokl1h
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run GroupDRO-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/kcsokl1h
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_202411-x7wgjgym
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run DANN-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/x7wgjgym
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_211512-1cprftuw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Mixup-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/1cprftuw
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_221412-3rdkxv1x
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run RSC-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/3rdkxv1x
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_230657-rwt00m2t
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run MMD-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/rwt00m2t
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240502_235813-4wsyy9kg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run CORAL-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/4wsyy9kg
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 950, in _bootstrap_inner
+    self.run()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 888, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 286, in check_stop_status
+    self._loop_check_status(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 224, in _loop_check_status
+    local_handle = request()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface.py", line 840, in deliver_stop_status
+    return self._deliver_stop_status(status)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 494, in _deliver_stop_status
+    return self._deliver_record(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 459, in _deliver_record
+    handle = mailbox._deliver_record(record, interface=self)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\mailbox.py", line 455, in _deliver_record
+    interface._publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_004903-yiipiwtl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ANDMask-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/yiipiwtl
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_014008-zdgrixg4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run VREx-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/zdgrixg4
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Exception in thread ChkStopThr:
+Traceback (most recent call last):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 950, in _bootstrap_inner
+    self.run()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\threading.py", line 888, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 286, in check_stop_status
+    self._loop_check_status(
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\wandb_run.py", line 224, in _loop_check_status
+    local_handle = request()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface.py", line 840, in deliver_stop_status
+    return self._deliver_stop_status(status)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 494, in _deliver_stop_status
+    return self._deliver_record(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 459, in _deliver_record
+    handle = mailbox._deliver_record(record, interface=self)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\mailbox.py", line 455, in _deliver_record
+    interface._publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\wandb\sdk\lib\sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: / Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_023057-ov2td8lf
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run GroupDRO-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/ov2td8lf
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_074613-v1c8dnkc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/v1c8dnkc
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_085754-8hdcjgpy
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run MMD-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/8hdcjgpy
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 120, in <module>
+    sch = get_scheduler(opt, args)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\MMD.py", line 38, in update
+    clf_loss = 0
+KeyboardInterrupt
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_092310-44wtd5sn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ANDMask-0.001-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/44wtd5sn
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 121, in <module>
+    step_vals = algorithm.update(minibatches_device, opt, sch)
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\ANDMask.py", line 37, in update
+    self.mask_grads(self.tau, param_gradients, self.network.parameters())
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\alg\algs\ANDMask.py", line 51, in mask_grads
+    mask = mask.to(torch.float32)  # BCHW
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\train.py", line 116, in <module>
+    for iter_num in range(args.steps_per_epoch):
+  File "D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\datautil\mydataloader.py", line 46, in __iter__
+    yield next(self._infinite_iterator)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1329, in _next_data
+    idx, data = self._get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1295, in _get_data
+    success, data = self._try_get_data()
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torch\utils\data\dataloader.py", line 1133, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\queues.py", line 113, in get
+    if not self._poll(timeout):
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 262, in poll
+    return self._poll(timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 335, in _poll
+    return bool(wait([self], timeout))
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 884, in wait
+    ready_handles = _exhaustive_wait(waithandle_to_obj.keys(), timeout)
+  File "C:\Users\yzh\anaconda3\envs\py39\lib\multiprocessing\connection.py", line 816, in _exhaustive_wait
+    res = _winapi.WaitForMultipleObjects(L, False, timeout)
+KeyboardInterrupt
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_101617-h0ovgyxb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/h0ovgyxb
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_101634-mgqyp2zc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run CORAL-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/mgqyp2zc
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_102254-mctk1m1i
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/mctk1m1i
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_110432-diuhbo9o
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ERM-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/diuhbo9o
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_124005-1e70xrbg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run DANN-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/1e70xrbg
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: yaozh163 (yaozhh). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.16.6
+wandb: Run data is saved locally in D:\TransferLearning\MyTransferLearning-wangjindong-\code\DeepDG\wandb\run-20240503_141408-1kz4lycl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run Mixup-0.0005-Clipart
+wandb:  View project at https://wandb.ai/yaozhh/WJD_OfficeHome
+wandb:  View run at https://wandb.ai/yaozhh/WJD_OfficeHome/runs/1kz4lycl
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\yzh\anaconda3\envs\py39\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)

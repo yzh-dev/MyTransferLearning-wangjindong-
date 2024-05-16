@@ -10,7 +10,7 @@ class CORAL(ERM):
         self.args = args
         self.kernel_type = "mean_cov"
 
-    def coral(self, x, y):
+    def coral(self, x, y):  # 度量一阶矩和二阶矩
         mean_x = x.mean(0, keepdim=True)
         mean_y = y.mean(0, keepdim=True)
         cent_x = x - mean_x

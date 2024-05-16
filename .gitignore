@@ -9,3 +9,4 @@ outputs/
 __pycache__/
 /code/clip/log/
 /code/Myclip/log/
+/code/DeepDG/wandb/

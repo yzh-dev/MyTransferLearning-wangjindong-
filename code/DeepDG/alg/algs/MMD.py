@@ -28,37 +28,35 @@ class MMD(ERM):
 
         return K
 
-    def mmd(self, x, y):
+    def mmd(self, x, y):  # x: batch * feat_dim
         Kxx = self.gaussian_kernel(x, x).mean()
         Kyy = self.gaussian_kernel(y, y).mean()
         Kxy = self.gaussian_kernel(x, y).mean()
         return Kxx + Kyy - 2 * Kxy
 
     def update(self, minibatches, opt, sch):
-        objective = 0
-        penalty = 0
-        nmb = len(minibatches)
+        clf_loss = 0
+        mmd_loss = 0
+        num_domains = len(minibatches)
 
         features = [self.featurizer(
             data[0].cuda().float()) for data in minibatches]
         classifs = [self.classifier(fi) for fi in features]
         targets = [data[1].cuda().long() for data in minibatches]
+        # 計算domains之間的MMD損失作爲正則化項
+        for i in range(num_domains):
+            clf_loss += F.cross_entropy(classifs[i], targets[i])  # clf loss
+            for j in range(i + 1, num_domains):
+                mmd_loss += self.mmd(features[i], features[j])  # loss between domains
 
-        for i in range(nmb):
-            objective += F.cross_entropy(classifs[i], targets[i])
-            for j in range(i + 1, nmb):
-                penalty += self.mmd(features[i], features[j])
-
-        objective /= nmb
-        if nmb > 1:
-            penalty /= (nmb * (nmb - 1) / 2)
-
+        clf_loss /= num_domains
+        if num_domains > 1:
+            mmd_loss /= (num_domains * (num_domains - 1) / 2)
+        total_loss = clf_loss + self.args.mmd_gamma*mmd_loss
         opt.zero_grad()
-        (objective + (self.args.mmd_gamma*penalty)).backward()
+        total_loss.backward()
         opt.step()
         if sch:
             sch.step()
-        if torch.is_tensor(penalty):
-            penalty = penalty.item()
 
-        return {'class': objective.item(), 'mmd': penalty, 'total': (objective.item() + (self.args.mmd_gamma*penalty))}
+        return {'class': clf_loss.item(), 'mmd': mmd_loss.item(), 'total': total_loss.item()}
